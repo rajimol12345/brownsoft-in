@@ -89,9 +89,6 @@ const Footer = () => {
               <span>cs@brownsofts.in</span>
             </div>
           </div>
-          {/* <button className="quote-btn">
-            Get A Quote <FaArrowRight />
-          </button> */}
         </div>
       </div>
 
