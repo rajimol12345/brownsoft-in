@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogData';
 import './Blog.css';
@@ -43,6 +43,18 @@ import {
 } from 'react-icons/fa';
 
 const Blog = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 6;
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+
   return (
     <div className="blog-page">
       <section className="blog-hero">
@@ -61,7 +73,7 @@ const Blog = () => {
           <div className="blog-layout">
             <div className="blog-grid-side">
               <div className="blog-grid">
-                {blogPosts.map((post) => (
+                {currentPosts.map((post) => (
                   <div key={post.id} className="blog-card">
                     <div className="blog-image">
                       <Link to={`/blog/${post.id}`}>
@@ -99,10 +111,29 @@ const Blog = () => {
               </div>
               
               <div className="pagination">
-                <button className="page-btn">‹</button>
-                <button className="page-btn active">1</button>
-                <button className="page-btn">2</button>
-                <button className="page-btn">›</button>
+                <button 
+                  className="page-btn" 
+                  onClick={() => paginate(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1}
+                >
+                  ‹
+                </button>
+                {[...Array(totalPages)].map((_, i) => (
+                  <button 
+                    key={i + 1} 
+                    className={`page-btn ${currentPage === i + 1 ? 'active' : ''}`}
+                    onClick={() => paginate(i + 1)}
+                  >
+                    {i + 1}
+                  </button>
+                ))}
+                <button 
+                  className="page-btn" 
+                  onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
+                  disabled={currentPage === totalPages}
+                >
+                  ›
+                </button>
               </div>
             </div>
 

@@ -9,20 +9,12 @@ import {
   FaMapMarkerAlt, 
   FaPhoneAlt, 
   FaEnvelope, 
-  FaArrowRight,
-  FaArrowUp
+  FaArrowRight
 } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 import './Footer.css';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -49,6 +41,7 @@ const Footer = () => {
           <ul className="footer-links">
             <li><a href="/blog"><FaChevronRight className="footer-links-icon" /> Our Blog</a></li>
             <li><a href="/services"><FaChevronRight className="footer-links-icon" /> Our Services</a></li>
+            <li><a href="/career"><FaChevronRight className="footer-links-icon" /> Careers</a></li>
             <li><a href="/privacy-policy"><FaChevronRight className="footer-links-icon" /> Privacy Policy</a></li>
             <li><a href="/opt-out-policy"><FaChevronRight className="footer-links-icon" /> Opt Out Policy</a></li>
             <li><a href="/terms-conditions"><FaChevronRight className="footer-links-icon" /> Terms & Conditions</a></li>
@@ -104,9 +97,6 @@ const Footer = () => {
 
       {/* Footer Bottom Bar */}
       <div className="footer-bottom">
-        <button className="scroll-top-btn" onClick={scrollToTop} aria-label="Scroll to top">
-          <FaArrowUp />
-        </button>
         <div className="footer-bottom-container">
           <p className="copyright">Copyright © 2026 BrownSofts LLC. All Rights Reserved.</p>
           <div className="footer-bottom-links">
