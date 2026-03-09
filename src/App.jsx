@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Services from './components/Services';
+import Career from './components/Career';
 import Blog from './components/Blog';
 import BlogDetails from './components/BlogDetails';
 import Footer from './components/Footer';
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Services />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/career" element={<Career />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetails />} />
         </Routes>

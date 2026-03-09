@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaChevronRight, FaSearch, FaBriefcase, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaChevronRight, FaSearch, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import './Career.css';
 
 const jobsData = [
@@ -179,9 +179,9 @@ const Career = () => {
                   <input type="email" placeholder="Your Email" required />
                 </div>
                 <div className="form-group">
-                  <div className="file-input-wrapper">
-                    <button type="button" className="file-btn">Upload Resume</button>
-                    <input type="file" />
+                  <div className="career-file-input-wrapper">
+                    <button type="button" className="career-file-btn">Upload Resume</button>
+                    <input type="file" required />
                   </div>
                 </div>
                 <div className="form-terms">
