@@ -431,16 +431,34 @@
     /* Remove underline for dropdown links */
 }
 
-.cat-icon-wrap {
-    width: 32px;
-    height: 32px;
-    background: rgba(0, 0, 0, 0.03);
-    border-radius: 8px;
+.cat-img-wrap {
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
-    transition: all 0.25s ease;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cat-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dropdown-cat-link:hover .cat-image {
+    transform: scale(1.1);
+}
+
+.dropdown-item-flat:hover .cat-img-wrap,
+.dropdown-submenu:hover .cat-img-wrap {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
 }
 
 .sub-arrow {

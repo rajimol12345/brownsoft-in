@@ -2,10 +2,18 @@ import { useState, useEffect, useRef } from 'react';
 import './Header.css';
 import logo from '../images/logo.png';
 
+// Service Images
+import webImg from '../images/services/web_design.png';
+import graphicsImg from '../images/services/graphics_design.png';
+import seoImg from '../images/services/seo_marketing.png';
+import adminImg from '../images/services/admin_support.png';
+import civilImg from '../images/services/civil_engineering.png';
+
 const services = [
     {
         id: 'web',
         icon: 'fas fa-code',
+        image: webImg,
         color: '#4ECDC4',
         title: 'Web Design',
         items: [
@@ -22,6 +30,7 @@ const services = [
     {
         id: 'graphics',
         icon: 'fas fa-palette',
+        image: graphicsImg,
         color: '#A78BFA',
         title: 'Graphics & Design',
         items: [
@@ -44,6 +53,7 @@ const services = [
     {
         id: 'seo',
         icon: 'fas fa-chart-line',
+        image: seoImg,
         color: '#FB923C',
         title: 'SEO & Marketing',
         items: [
@@ -64,6 +74,7 @@ const services = [
     {
         id: 'admin',
         icon: 'fas fa-headset',
+        image: adminImg,
         color: '#34D399',
         title: 'Admin Support',
         items: [
@@ -81,6 +92,7 @@ const services = [
     {
         id: 'civil',
         icon: 'fas fa-hard-hat',
+        image: civilImg,
         color: '#FBBF24',
         title: 'Civil Engineering',
         items: [
@@ -192,9 +204,9 @@ const Header = () => {
                                         {services.map((cat) => (
                                             <li key={cat.id} className="dropdown-item-flat">
                                                 <a href="#" className="dropdown-cat-link">
-                                                    <span className="cat-icon-wrap" style={{ color: cat.color }}>
-                                                        <i className={cat.icon}></i>
-                                                    </span>
+                                                    <div className="cat-img-wrap">
+                                                        <img src={cat.image} alt={cat.title} className="cat-image" />
+                                                    </div>
                                                     {cat.title}
                                                 </a>
                                             </li>
