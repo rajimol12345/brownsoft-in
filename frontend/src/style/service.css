@@ -1,12 +1,5 @@
-/* =============================================
-   SERVICE DETAIL LAYOUT — UPDATED DESIGN
-   ============================================= */
+/* Service Detail Page Styles */
 
-.sdl-page {
-    background-color: #ffffff;
-}
-
-/* ── PAGE HEADER / HERO ── */
 .sd-page-header {
     background: linear-gradient(rgba(15, 13, 29, 0.8), rgba(15, 13, 29, 0.8)), url('../assets/images/about-hero-bg.jpg');
     background-size: cover;
@@ -29,12 +22,10 @@
     justify-content: center;
     gap: 10px;
     font-weight: 600;
-    list-style: none;
-    padding: 0;
 }
 
 .sd-breadcrumb a {
-    color: #2563eb;
+    color: var(--primary-color, #2563eb);
     text-decoration: none;
 }
 
@@ -42,15 +33,6 @@
     color: #fff;
 }
 
-/* ── BODY LAYOUT ── */
-.sdl-container {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 50px;
-    padding-bottom: 80px;
-}
-
-/* ── MAIN CONTENT (LEFT) ── */
 .sd-main-image {
     width: 100%;
     border-radius: 15px;
@@ -81,7 +63,6 @@
     margin-bottom: 25px;
 }
 
-/* Feature List */
 .sd-feature-list {
     list-style: none;
     padding: 0;
@@ -89,6 +70,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+    .sd-feature-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 .sd-feature-item {
@@ -100,15 +87,14 @@
 }
 
 .sd-feature-icon {
-    color: #2563eb;
+    color: var(--primary-color, #2563eb);
     font-size: 20px;
 }
 
-/* Steps Section */
-.sd-steps-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.sd-steps-section {
+    background: #f8faff;
+    padding: 40px;
+    border-radius: 15px;
     margin-bottom: 50px;
 }
 
@@ -130,7 +116,7 @@
 .sd-step-icon {
     width: 70px;
     height: 70px;
-    background: #2563eb;
+    background: var(--primary-color, #2563eb);
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -146,98 +132,30 @@
     margin-bottom: 15px;
 }
 
-/* Advantage Box */
-.sd-advantage-content .sd-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #1a1b3a;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-/* ── FULL WIDTH ADVANTAGE ── */
-.sd-advantage-full-width {
-    background: #f8faff;
-    padding: 100px 0;
-    margin: 60px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.sd-advantage-full-width .sd-advantage-box {
-    background: transparent;
-    border: none;
-    padding: 0;
-    box-shadow: none;
-}
-
-.sdl-container-bottom {
-    display: block;
-    padding-bottom: 100px;
-}
-
-.sd-main-content-full {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.mb-5 {
-    margin-bottom: 3rem;
-}
-
-/* FAQ Section */
-.sd-faq-modern-wrapper {
-    margin-top: 50px;
-}
-
-.sd-custom-accordion {
+.sd-advantage-box {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    gap: 30px;
+    align-items: flex-start;
 }
 
-.sd-faq-item {
-    border: 1px solid #f1f4f9;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+@media (max-width: 991px) {
+    .sd-advantage-box {
+        flex-direction: column;
+    }
 }
 
-.sd-faq-summary {
-    font-weight: 700;
-    color: #1a1b3a;
-    padding: 18px 25px;
-    font-size: 17px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    background: #fff;
+.sd-advantage-img {
+    flex: 1;
+    width: 100%;
+    border-radius: 15px;
 }
 
-.sd-faq-summary::-webkit-details-marker {
-    display: none;
+.sd-advantage-content {
+    flex: 1;
 }
 
-.sd-faq-item[open] .sd-faq-summary {
-    background-color: #f8faff;
-    color: #2563eb;
-}
 
-.sd-faq-content {
-    padding: 0 25px 20px;
-    color: #6a748a;
-    line-height: 1.7;
-    font-size: 15px;
-    background: #fff;
-}
-
-/* ── SIDEBAR (RIGHT) ── */
+/* Sidebar Styles */
 .sd-sidebar {
     position: sticky;
     top: 100px;
@@ -266,7 +184,7 @@
     left: 0;
     width: 50px;
     height: 3px;
-    background: #2563eb;
+    background: var(--primary-color, #2563eb);
 }
 
 .sd-service-menu {
@@ -276,9 +194,7 @@
 }
 
 .sd-service-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
     padding: 15px 20px;
     background: #f8faff;
     color: #1a1b3a;
@@ -288,9 +204,8 @@
     transition: all 0.3s ease;
 }
 
-.sd-service-link.active,
 .sd-service-link:hover {
-    background: #2563eb;
+    background: var(--primary-color, #2563eb);
     color: #fff;
 }
 
@@ -309,7 +224,6 @@
     margin-bottom: 15px;
     transition: all 0.3s ease;
     border: 1px solid #eee;
-    cursor: pointer;
 }
 
 .sd-download-btn:hover {
@@ -318,11 +232,10 @@
 }
 
 .sd-contact-widget {
-    background: #2563eb;
+    background: var(--primary-color, #2563eb);
     color: #fff;
     text-align: center;
     padding: 40px 30px;
-    border-radius: 15px;
 }
 
 .sd-contact-icon {
@@ -338,7 +251,7 @@
 
 .sd-contact-btn {
     background: #fff;
-    color: #2563eb;
+    color: var(--primary-color, #2563eb);
     padding: 12px 30px;
     border-radius: 5px;
     text-decoration: none;
@@ -352,80 +265,140 @@
     color: #fff;
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 1200px) {
-    .sdl-container {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
+/* Modern FAQ Section Styles */
+.sd-faq-modern-wrapper {
 
-    .sd-sidebar {
-        position: static;
-        margin-top: 40px;
+    width: 90%;
+
+}
+
+.sd-custom-accordion.accordion {
+    --bs-accordion-border-color: #f1f4f9;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-bg: #f8faff;
+    --bs-accordion-active-color: var(--primary-color, #2563eb);
+}
+
+.sd-custom-accordion .accordion-item {
+    border: 1px solid #f1f4f9;
+    border-radius: 10px !important;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.sd-custom-accordion .accordion-button {
+    font-weight: 700;
+    color: #1a1b3a;
+    padding: 18px 25px;
+    font-size: 17px;
+}
+
+.sd-custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #f8faff;
+    color: var(--primary-color, #2563eb);
+    box-shadow: none;
+}
+
+.sd-custom-accordion .accordion-body {
+    padding: 0 25px 20px;
+    color: #6a748a;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.sd-custom-accordion .accordion-button::after {
+    background-size: 0.9rem;
+}
+
+/* ── RESPONSIVE ENHANCEMENTS ── */
+
+@media (max-width: 1200px) {
+    .sd-page-title {
+        font-size: 42px;
     }
 }
 
 @media (max-width: 991px) {
-    .sd-advantage-box {
-        flex-direction: column;
-    }
-
     .sd-page-header {
         padding: 80px 0;
         margin-bottom: 50px;
     }
 
     .sd-page-title {
-        font-size: 38px;
-    }
-}
-
-@media (max-width: 767px) {
-
-    .sd-feature-list,
-    .sd-steps-row {
-        grid-template-columns: 1fr;
+        font-size: 36px;
     }
 
-    .sd-page-title {
-        font-size: 32px;
+    .sd-sidebar {
+        position: static;
+        margin-top: 50px;
     }
 
     .sd-section-title {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .sd-section-subtitle {
         font-size: 24px;
     }
 
-    .sd-widget {
-        padding: 20px;
-    }
-
-    .sd-main-image {
-        margin-bottom: 25px;
+    .sd-faq-modern-wrapper {
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .sd-page-header {
         padding: 60px 0;
+        margin-bottom: 40px;
     }
 
     .sd-page-title {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .sd-breadcrumb {
         font-size: 14px;
     }
 
-    .sd-steps-row {
-        gap: 15px;
+    .sd-section-title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .sd-section-subtitle {
+        font-size: 22px;
+    }
+
+    .sd-text {
+        font-size: 15px;
     }
 
     .sd-step-card {
+        padding: 25px 20px;
+    }
+
+    .sd-widget {
         padding: 20px;
+    }
+
+    .sd-contact-phone {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sd-page-title {
+        font-size: 26px;
+    }
+
+    .sd-step-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .sd-advantage-box {
+        padding: 0;
     }
 }

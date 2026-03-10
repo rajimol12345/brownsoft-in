@@ -46,7 +46,7 @@ const ServiceDetailLayout = ({
                 <main className="sd-main-content">
                     <div className="sd-content-section">
                         <img src={mainImage} alt={title} className="sd-main-image" />
-                        
+
                         <h2 className="sd-section-title">{title}</h2>
                         <div className="sd-text">
                             {description}
@@ -86,46 +86,6 @@ const ServiceDetailLayout = ({
                             ))}
                         </div>
 
-                        {advantage && (
-                            <>
-                                <h3 className="sd-section-subtitle">Key Advantages</h3>
-                                <div className="sd-advantage-box">
-                                    <img src={advantage.image} alt="Advantage" className="sd-advantage-img" />
-                                    <div className="sd-advantage-content">
-                                        <p className="sd-text">
-                                            {advantage.text || "Reliable services that prioritize client satisfaction and visual excellence."}
-                                        </p>
-                                        <ul className="sd-feature-list" style={{ gridTemplateColumns: '1fr' }}>
-                                            {(advantage.points || features || []).slice(0, 4).map((point, idx) => (
-                                                <li key={idx} className="sd-feature-item">
-                                                    <i className="fas fa-check-square sd-feature-icon"></i>
-                                                    <span>{point}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </>
-                        )}
-
-                        {faqs && (
-                            <div className="sd-faq-modern-wrapper">
-                                <h3 className="sd-section-subtitle mb-4">Common Questions</h3>
-                                <div className="sd-custom-accordion">
-                                    {faqs.map((faq, idx) => (
-                                        <details key={idx} className="sd-faq-item">
-                                            <summary className="sd-faq-summary">
-                                                <span><i className="fas fa-question-circle me-2"></i> {faq.question}</span>
-                                                <i className="fas fa-chevron-down"></i>
-                                            </summary>
-                                            <div className="sd-faq-content">
-                                                <p>{faq.answer}</p>
-                                            </div>
-                                        </details>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
                     </div>
                 </main>
 
@@ -136,9 +96,9 @@ const ServiceDetailLayout = ({
                         <h4 className="sd-widget-title">Our Expertise</h4>
                         <div className="sd-service-menu">
                             {sidebarMenu.map((item, idx) => (
-                                <Link 
-                                    key={idx} 
-                                    to={item.path || '#!'} 
+                                <Link
+                                    key={idx}
+                                    to={item.path || '#!'}
                                     className={`sd-service-link ${item.active ? 'active' : ''}`}
                                 >
                                     {item.label}
@@ -175,6 +135,54 @@ const ServiceDetailLayout = ({
                         </Link>
                     </div>
                 </aside>
+            </div>
+
+            {/* ── FULL WIDTH ADVANTAGE SECTION ── */}
+            {advantage && (
+                <section className="sd-advantage-full-width">
+                    <div className="container">
+                        <h3 className="sd-section-subtitle text-center mb-5">Key Advantages</h3>
+                        <div className="sd-advantage-box">
+                            <img src={advantage.image} alt="Advantage" className="sd-advantage-img" />
+                            <div className="sd-advantage-content">
+                                <p className="sd-text">
+                                    {advantage.text || "Reliable services that prioritize client satisfaction and visual excellence."}
+                                </p>
+                                <ul className="sd-feature-list" style={{ gridTemplateColumns: '1fr' }}>
+                                    {(advantage.points || features || []).slice(0, 4).map((point, idx) => (
+                                        <li key={idx} className="sd-feature-item">
+                                            <i className="fas fa-check-square sd-feature-icon"></i>
+                                            <span>{point}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            <div className="container sdl-container-bottom">
+                <main className="sd-main-content-full">
+                    {faqs && (
+                        <div className="sd-faq-modern-wrapper">
+                            <h3 className="sd-section-subtitle mb-4">Common Questions</h3>
+                            <div className="sd-custom-accordion">
+                                {faqs.map((faq, idx) => (
+                                    <details key={idx} className="sd-faq-item">
+                                        <summary className="sd-faq-summary">
+                                            <span><i className="fas fa-question-circle me-2"></i> {faq.question}</span>
+                                            <i className="fas fa-chevron-down"></i>
+                                        </summary>
+                                        <div className="sd-faq-content">
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    </details>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </main>
             </div>
         </div>
     );

@@ -24,6 +24,14 @@ import ShortFilm from './pages/VideoServices/ShortFilm';
 import Travel from './pages/VideoServices/Travel';
 import SocialMediaAds from './pages/VideoServices/SocialMediaAds';
 import Infographic from './pages/VideoServices/Infographic';
+import ProfessionalWebDesign from './pages/WebServices/ProfessionalWebDesign';
+import CustomWebsiteDesign from './pages/WebServices/CustomWebsiteDesign';
+import CorporateWebsites from './pages/WebServices/CorporateWebsites';
+import LandingPages from './pages/WebServices/LandingPages';
+import SmallBusinessWebsites from './pages/WebServices/SmallBusinessWebsites';
+import WebsiteRedesign from './pages/WebServices/WebsiteRedesign';
+import EcommerceWebsites from './pages/WebServices/EcommerceWebsites';
+import CMSWebsites from './pages/WebServices/CMSWebsites';
 
 function App() {
   return (
@@ -50,7 +58,17 @@ function App() {
             <Route path="/services/video-animation/travel" element={<Travel />} />
             <Route path="/services/video-animation/social-ads" element={<SocialMediaAds />} />
             <Route path="/services/video-animation/infographic" element={<Infographic />} />
+            
             <Route path="/services/web-design" element={<WebDesign />} />
+            <Route path="/services/web-design/professional" element={<ProfessionalWebDesign />} />
+            <Route path="/services/web-design/custom" element={<CustomWebsiteDesign />} />
+            <Route path="/services/web-design/corporate" element={<CorporateWebsites />} />
+            <Route path="/services/web-design/landing-pages" element={<LandingPages />} />
+            <Route path="/services/web-design/small-business" element={<SmallBusinessWebsites />} />
+            <Route path="/services/web-design/redesign" element={<WebsiteRedesign />} />
+            <Route path="/services/web-design/ecommerce" element={<EcommerceWebsites />} />
+            <Route path="/services/web-design/cms" element={<CMSWebsites />} />
+
             <Route path="/services/graphics-design" element={<GraphicsDesign />} />
             <Route path="/services/seo-marketing" element={<SEOMarketing />} />
             <Route path="/services/admin-support" element={<AdminSupport />} />
