@@ -1,55 +1,52 @@
 import React from 'react';
-import ServiceDetailLayout from '../../components/ServiceDetailLayout';
+import VideoServiceLayout from '../../components/VideoServiceLayout';
+import { FiLayers, FiPenTool, FiImage } from 'react-icons/fi';
 
 const ProductDemo = () => {
-    const sidebarMenu = [
-        { label: 'TikTok Reels and YouTube Shorts', path: '/services/video-animation/shorts-reels' },
-        { label: 'Videos for YouTube and Vlogs', path: '/services/video-animation/youtube-vlogs' },
-        { label: 'Documentary Film Video Editing', path: '/services/video-animation/documentary' },
-        { label: 'Business & Corporate Video Editing', path: '/services/video-animation/corporate' },
-        { label: 'Film and Trailer Video Editing', path: '/services/video-animation/film-trailer' },
-        { label: 'Music Video Editing Suite', path: '/services/video-animation/music-video' },
-        { label: 'Weddings and Events Videos', path: '/services/video-animation/weddings-events' },
-        { label: 'Color Grading for Videos', path: '/services/video-animation/color-grading' },
-        { label: 'Education and Training Videos', path: '/services/video-animation/education-training' },
-        { label: 'Product Demo Videos', path: '/services/video-animation/product-demo', active: true },
-        { label: 'Podcast Videos', path: '/services/video-animation/podcast' },
-        { label: 'Short Film Videos', path: '/services/video-animation/short-film' },
-        { label: 'Travel Video Editing', path: '/services/video-animation/travel' },
-        { label: 'Social Media Video Ads', path: '/services/video-animation/social-ads' },
-        { label: 'Story Infographic Video Editing', path: '/services/video-animation/infographic' },
-    ];
-
     const data = {
-        title: 'Product Demo Videos',
-        heroTitle: 'Product Showcase & Demonstrations',
-        breadcrumbs: [
-            { label: 'Home', path: '/' },
-            { label: 'Video & Animation', path: '/services/video-animation' },
-            { label: 'Product Demos' }
-        ],
-        sidebarMenu: sidebarMenu,
-        mainImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200',
-        description: "Seeing is believing. We create product demo videos that highlight features, demonstrate value, and drive sales. Our editing focuses on detail, clarity, and persuasive visual storytelling.",
-        features: [
+        title: "Product Demo Videos",
+        breadcrumbLabel: "Product Demos",
+        mainImg: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+        subtitle: "Product Showcase & Demonstrations",
+        description1: "Seeing is believing. We create product demo videos that highlight features, demonstrate value, and drive sales. Our editing focuses on detail, clarity, and persuasive visual storytelling.",
+        description2: "From software walkthroughs to physical product reveals, we know how to showcase what makes your offering unique. We use professional lighting and grading to make your product look its absolute best.",
+        featureList1: [
             "Macro-detail and close-up focus",
             "Clear feature-to-benefit visual flow",
             "Sleek and modern graphical callouts"
         ],
-        subDescription: "From software walkthroughs to physical product reveals, we know how to showcase what makes your offering unique. We use professional lighting and grading to make your product look its absolute best.",
-        videoThumbnail: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200',
-        subSection: {
-            title: "Convert prospects into customers with product videos that demonstrate your value clearly.",
-            image: 'https://images.unsplash.com/photo-1491933382434-500287f9b54b?auto=format&fit=crop&q=80&w=600',
-            points: [
-                "Advanced screen capture editing",
-                "3D model and render integration",
-                "Fast-paced social media cuts"
-            ]
-        }
+        featureList2: [
+            "Advanced screen capture editing",
+            "3D model and render integration",
+            "Fast-paced social media cuts"
+        ],
+        stepsTitle: "3 Steps to Your Product Reveal",
+        steps: [
+            { title: 'Discovery & Feature', desc: 'We identify the key features and USP of your product.', icon: <FiLayers /> },
+            { title: 'Production & Edit', desc: 'Our editors build a persuasive, high-impact showcase.', icon: <FiPenTool /> },
+            { title: 'Final Delivery', desc: 'Receive high-quality masters ready for your store or web.', icon: <FiImage /> }
+        ],
+        advantageImg: "https://images.unsplash.com/photo-1491933382434-500287f9b54b?auto=format&fit=crop&q=80&w=600",
+        advantageContent: "Convert prospects into customers with product videos that demonstrate your value clearly.",
+        advantageFeatureList: [
+            "Advanced screen capture editing",
+            "3D model and render integration",
+            "Fast-paced social media cuts"
+        ],
+        faqs: [
+            {
+                question: "Do you handle specialized '3D' product animation?",
+                answer: "Yes, we can integrate 3D renders into your live-action footage or create full 3D product animations to showcase internal components."
+            },
+            {
+                question: "Can you edit 'explainer' style product videos?",
+                answer: "Absolutely. We specialize in creating high-clarity explainer videos that break down complex product usage into simple steps."
+            }
+        ],
+        activePath: "/services/video-animation/product-demo"
     };
 
-    return <ServiceDetailLayout {...data} />;
+    return <VideoServiceLayout {...data} />;
 };
 
 export default ProductDemo;

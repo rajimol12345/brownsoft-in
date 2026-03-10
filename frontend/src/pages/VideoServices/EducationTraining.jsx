@@ -1,55 +1,52 @@
 import React from 'react';
-import ServiceDetailLayout from '../../components/ServiceDetailLayout';
+import VideoServiceLayout from '../../components/VideoServiceLayout';
+import { FiLayers, FiPenTool, FiImage } from 'react-icons/fi';
 
 const EducationTraining = () => {
-    const sidebarMenu = [
-        { label: 'TikTok Reels and YouTube Shorts', path: '/services/video-animation/shorts-reels' },
-        { label: 'Videos for YouTube and Vlogs', path: '/services/video-animation/youtube-vlogs' },
-        { label: 'Documentary Film Video Editing', path: '/services/video-animation/documentary' },
-        { label: 'Business & Corporate Video Editing', path: '/services/video-animation/corporate' },
-        { label: 'Film and Trailer Video Editing', path: '/services/video-animation/film-trailer' },
-        { label: 'Music Video Editing Suite', path: '/services/video-animation/music-video' },
-        { label: 'Weddings and Events Videos', path: '/services/video-animation/weddings-events' },
-        { label: 'Color Grading for Videos', path: '/services/video-animation/color-grading' },
-        { label: 'Education and Training Videos', path: '/services/video-animation/education-training', active: true },
-        { label: 'Product Demo Videos', path: '/services/video-animation/product-demo' },
-        { label: 'Podcast Videos', path: '/services/video-animation/podcast' },
-        { label: 'Short Film Videos', path: '/services/video-animation/short-film' },
-        { label: 'Travel Video Editing', path: '/services/video-animation/travel' },
-        { label: 'Social Media Video Ads', path: '/services/video-animation/social-ads' },
-        { label: 'Story Infographic Video Editing', path: '/services/video-animation/infographic' },
-    ];
-
     const data = {
-        title: 'Education and Training Videos',
-        heroTitle: 'Educational Content & E-Learning',
-        breadcrumbs: [
-            { label: 'Home', path: '/' },
-            { label: 'Video & Animation', path: '/services/video-animation' },
-            { label: 'Education & Training' }
-        ],
-        sidebarMenu: sidebarMenu,
-        mainImage: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200',
-        description: "Clarity and engagement are essential for effective learning. We edit educational and training videos that make complex topics easy to understand, using clear pacing, helpful graphics, and clean audio.",
-        features: [
+        title: "Education and Training Videos",
+        breadcrumbLabel: "Education & Training",
+        mainImg: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200",
+        subtitle: "Educational Content & E-Learning",
+        description1: "Clarity and engagement are essential for effective learning. We edit educational and training videos that make complex topics easy to understand, using clear pacing, helpful graphics, and clean audio.",
+        description2: "Whether it's a corporate training module or an online course for students, we ensure your message is delivered effectively. We focus on removing distractions and emphasizing key learning points through visual cues.",
+        featureList1: [
             "Structured pacing for information retention",
             "Clear screen-recording and slide integration",
             "Engaging call-to-action and summary overlays"
         ],
-        subDescription: "Whether it's a corporate training module or an online course for students, we ensure your message is delivered effectively. We focus on removing distractions and emphasizing key learning points through visual cues.",
-        videoThumbnail: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200',
-        subSection: {
-            title: "Empower your learners with high-quality educational videos that are as engaging as they are informative.",
-            image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600',
-            points: [
-                "Closed captioning and transcription",
-                "Interactive element placeholders",
-                "Chapter and timestamp organization"
-            ]
-        }
+        featureList2: [
+            "Closed captioning and transcription",
+            "Interactive element placeholders",
+            "Chapter and timestamp organization"
+        ],
+        stepsTitle: "3 Steps to Your Educational Video",
+        steps: [
+            { title: 'Discovery & Script', desc: 'We align on the educational goals and key takeaways.', icon: <FiLayers /> },
+            { title: 'Production & Edit', desc: 'Our editors build a clear, structured learning journey.', icon: <FiPenTool /> },
+            { title: 'Final Delivery', desc: 'Receive high-quality masters ready for your LMS or web.', icon: <FiImage /> }
+        ],
+        advantageImg: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600",
+        advantageContent: "Empower your learners with high-quality educational videos that are as engaging as they are informative.",
+        advantageFeatureList: [
+            "Closed captioning and transcription",
+            "Interactive element placeholders",
+            "Chapter and timestamp organization"
+        ],
+        faqs: [
+            {
+                question: "Do you provide voiceover services?",
+                answer: "While we specialize in editing, we can assist in finding professional voiceover artists that fit your educational tone."
+            },
+            {
+                question: "Can you add interactive quizzes to the video?",
+                answer: "We can add visual cues and 'pause' points for quizzes, but the interactivity itself is usually handled by your LMS platform."
+            }
+        ],
+        activePath: "/services/video-animation/education-training"
     };
 
-    return <ServiceDetailLayout {...data} />;
+    return <VideoServiceLayout {...data} />;
 };
 
 export default EducationTraining;

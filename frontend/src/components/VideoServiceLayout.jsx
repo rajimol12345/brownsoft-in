@@ -1,15 +1,30 @@
 import React from 'react';
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
-import { FiCheckSquare, FiLayers, FiPenTool, FiImage, FiPhoneCall, FiArrowRight, FiHelpCircle } from 'react-icons/fi';
+import { FiCheckSquare, FiLayers, FiPhoneCall, FiArrowRight, FiHelpCircle } from 'react-icons/fi';
 import { FaFilePdf, FaFileWord } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../style/service.css';
 
-// Images for Video & Animation
-const mainImg = "/assets/images/video-production-main.png";
-const advantageImg = "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070&auto=format&fit=crop";
-
-const VideoAnimation = () => {
+const VideoServiceLayout = ({
+    title,
+    breadcrumbLabel,
+    mainImg,
+    description1,
+    description2,
+    subtitle,
+    featureList1 = [],
+    featureList2 = [],
+    stepsTitle,
+    stepsDescription,
+    steps = [],
+    advantageTitle,
+    advantageDescription,
+    advantageImg,
+    advantageContent,
+    advantageFeatureList = [],
+    faqs = [],
+    activePath
+}) => {
     const servicesList = [
         { label: "TikTok Reels and YouTube Shorts", path: "/services/video-animation/shorts-reels" },
         { label: "Videos for YouTube and Vlogs", path: "/services/video-animation/youtube-vlogs" },
@@ -28,20 +43,6 @@ const VideoAnimation = () => {
         { label: "Story Infographic Video Editing", path: "/services/video-animation/infographic" },
     ];
 
-    const featureList1 = [
-        "Cinematic Video Editing",
-        "2D & 3D Motion Graphics",
-        "Professional Sound Design",
-        "Visual Effects (VFX)"
-    ];
-
-    const featureList2 = [
-        "Color Grading & Correction",
-        "Social Media Video Optimization",
-        "Scriptwriting & Storyboarding",
-        "High-Fidelity Rendering"
-    ];
-
     const handleDownload = (type) => {
         const filePath = type === 'pdf' ? '/assets/Video-Production-Portfolio.pdf' : '/assets/Service-Guide.docx';
         const fileName = type === 'pdf' ? 'Video-Production-Portfolio.pdf' : 'Service-Guide.docx';
@@ -58,11 +59,17 @@ const VideoAnimation = () => {
             {/* Page Header */}
             <div className="sd-page-header">
                 <Container>
-                    <h1 className="sd-page-title">Video & Animation Services</h1>
+                    <h1 className="sd-page-title">{title}</h1>
                     <div className="sd-breadcrumb">
                         <Link to="/">Home</Link>
                         <span>/</span>
-                        <span>Video & Animation</span>
+                        <Link to="/services/video-animation">Video & Animation</Link>
+                        {activePath !== "/services/video-animation" && (
+                            <>
+                                <span>/</span>
+                                <span>{breadcrumbLabel || title}</span>
+                            </>
+                        )}
                     </div>
                 </Container>
             </div>
@@ -72,15 +79,11 @@ const VideoAnimation = () => {
                     {/* Main Content */}
                     <Col lg={8}>
                         <div className="sd-content-section">
-                            <img src={mainImg} alt="Video & Animation Services" className="sd-main-image" />
+                            <img src={mainImg} alt={title} className="sd-main-image" />
 
-                            <h2 className="sd-section-title">Cinematic Storytelling for Your Brand</h2>
-                            <p className="sd-text">
-                                Our video and animation services are crafted to elevate your brand's digital identity. We combine creativity with technical precision to deliver stunning visuals that communicate your message effectively. From high-impact social media ads to complex animated explainers, we ensure every frame serves a purpose.
-                            </p>
-                            <p className="sd-text">
-                                Whether you're a startup looking for your first product demo or an established company needing a professional corporate documentary, our expertise ensures quality and impact at every stage of the production process.
-                            </p>
+                            <h2 className="sd-section-title">{subtitle || title}</h2>
+                            <p className="sd-text">{description1}</p>
+                            {description2 && <p className="sd-text">{description2}</p>}
 
                             <h3 className="sd-section-subtitle">Built on Creativity and Precision</h3>
                             <p className="sd-text">
@@ -110,48 +113,38 @@ const VideoAnimation = () => {
                                 </Col>
                             </Row>
 
-                            <h2 className="sd-section-title">3 Steps to Your Final Render</h2>
+                            <h2 className="sd-section-title">{stepsTitle || "Production Process"}</h2>
                             <p className="sd-text">
-                                We follow a streamlined production pipeline to ensure your project is delivered on time and exceeds your expectations.
+                                {stepsDescription || "We follow a streamlined production pipeline to ensure your project is delivered on time and exceeds your expectations."}
                             </p>
 
                             <Row className="mb-5">
-                                <Col md={4} className="mb-4">
-                                    <div className="sd-step-card">
-                                        <div className="sd-step-icon"><FiLayers /></div>
-                                        <h4 className="sd-step-title">Discovery & Script</h4>
-                                        <p className="sd-text small mb-0">We dive deep into your brand values and narrative goals.</p>
-                                    </div>
-                                </Col>
-                                <Col md={4} className="mb-4">
-                                    <div className="sd-step-card">
-                                        <div className="sd-step-icon"><FiPenTool /></div>
-                                        <h4 className="sd-step-title">Production & Edit</h4>
-                                        <p className="sd-text small mb-0">Our editors bring the timeline to life with precision cuts.</p>
-                                    </div>
-                                </Col>
-                                <Col md={4} className="mb-4">
-                                    <div className="sd-step-card">
-                                        <div className="sd-step-icon"><FiImage /></div>
-                                        <h4 className="sd-step-title">Final Delivery</h4>
-                                        <p className="sd-text small mb-0">Receive high-quality masters ready for any screen.</p>
-                                    </div>
-                                </Col>
+                                {steps.map((step, index) => (
+                                    <Col md={4} key={index} className="mb-4">
+                                        <div className="sd-step-card">
+                                            <div className="sd-step-icon">
+                                                {step.icon}
+                                            </div>
+                                            <h4 className="sd-step-title">{step.title}</h4>
+                                            <p className="sd-text small mb-0">{step.desc}</p>
+                                        </div>
+                                    </Col>
+                                ))}
                             </Row>
 
-                            <h3 className="sd-section-subtitle">Key Production Advantages</h3>
+                            <h3 className="sd-section-subtitle">{advantageTitle || "Key Production Advantages"}</h3>
                             <p className="sd-text">
-                                We are a forward-thinking production studio dedicated to creating innovative, functional, and impactful videos that inspire and endure.
+                                {advantageDescription || "We are a forward-thinking production studio dedicated to creating innovative, functional, and impactful videos."}
                             </p>
 
                             <div className="sd-advantage-box">
                                 <img src={advantageImg} alt="Production Advantage" className="sd-advantage-img" />
                                 <div className="sd-advantage-content">
                                     <p className="sd-text">
-                                        Reliable production services that prioritize client satisfaction and visual excellence.
+                                        {advantageContent || "Reliable production services that prioritize client satisfaction and visual excellence."}
                                     </p>
                                     <ul className="sd-feature-list" style={{ gridTemplateColumns: '1fr' }}>
-                                        {featureList2.map((item, index) => (
+                                        {advantageFeatureList.map((item, index) => (
                                             <li key={index} className="sd-feature-item">
                                                 <FiCheckSquare className="sd-feature-icon" />
                                                 <span>{item}</span>
@@ -165,38 +158,16 @@ const VideoAnimation = () => {
                         <div className="sd-faq-modern-wrapper mt-5">
                             <h3 className="sd-section-subtitle mb-4">Common Questions</h3>
                             <Accordion defaultActiveKey="0" className="sd-custom-accordion">
-                                <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                        <FiHelpCircle className="me-2" /> How do you ensure the video aligns with my brand?
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        We begin with a comprehensive discovery phase, researching your industry, competitors, and target audience. Our mood-boarding and scripting stages ensure every visual element resonates with your brand's core values.
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                                <Accordion.Item eventKey="1">
-                                    <Accordion.Header>
-                                        <FiHelpCircle className="me-2" /> What specific file formats are included in the final delivery?
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        We provide high-quality MP4 and MOV files optimized for web, social media (9:16, 1:1), and broadcast (16:9). Project source files are available upon request.
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                                <Accordion.Item eventKey="2">
-                                    <Accordion.Header>
-                                        <FiHelpCircle className="me-2" /> How many revision rounds are included?
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        We typically include 2 rounds of creative revisions at the rough-cut and fine-cut stages to ensure the final product meets your exact standards.
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                                <Accordion.Item eventKey="3">
-                                    <Accordion.Header>
-                                        <FiHelpCircle className="me-2" /> Who owns the rights to the final video?
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        Upon final payment, you receive full ownership and usage rights of the edited final product. We retain the right to showcase the work in our portfolio.
-                                    </Accordion.Body>
-                                </Accordion.Item>
+                                {faqs.map((faq, index) => (
+                                    <Accordion.Item eventKey={index.toString()} key={index}>
+                                        <Accordion.Header>
+                                            <FiHelpCircle className="me-2" /> {faq.question}
+                                        </Accordion.Header>
+                                        <Accordion.Body>
+                                            {faq.answer}
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                ))}
                             </Accordion>
                         </div>
                     </Col>
@@ -209,7 +180,11 @@ const VideoAnimation = () => {
                                 <h4 className="sd-widget-title">Our Expertise</h4>
                                 <div className="sd-service-menu">
                                     {servicesList.map((item, index) => (
-                                        <Link key={index} to={item.path} className="sd-service-link">
+                                        <Link
+                                            key={index}
+                                            to={item.path}
+                                            className={`sd-service-link ${activePath === item.path ? 'active' : ''}`}
+                                        >
                                             {item.label}
                                         </Link>
                                     ))}
@@ -248,4 +223,4 @@ const VideoAnimation = () => {
     );
 };
 
-export default VideoAnimation;
+export default VideoServiceLayout;

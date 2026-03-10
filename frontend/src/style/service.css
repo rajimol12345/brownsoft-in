@@ -1,0 +1,380 @@
+/* Service Detail Page Styles */
+
+.sd-page-header {
+    background: linear-gradient(rgba(15, 13, 29, 0.8), rgba(15, 13, 29, 0.8)), url('../assets/hero (3).jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 80px;
+}
+
+.sd-page-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.sd-breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.sd-breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.sd-breadcrumb span {
+    color: #fff;
+}
+
+.sd-main-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    object-fit: cover;
+    max-height: 460px;
+}
+
+.sd-content-section {
+    margin-bottom: 50px;
+}
+
+.sd-section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1a1b3a;
+    margin-bottom: 25px;
+}
+
+.sd-section-subtitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1b3a;
+    margin-bottom: 20px;
+}
+
+.sd-text {
+    color: #6a748a;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.sd-feature-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.sd-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1a1b3a;
+    font-weight: 600;
+}
+
+.sd-feature-icon {
+    color: var(--primary-color);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.sd-step-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.sd-step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.sd-step-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+}
+
+.sd-step-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.sd-advantage-box {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.sd-advantage-img {
+    width: 260px;
+    min-width: 260px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.sd-advantage-content {
+    flex: 1;
+}
+
+/* Sidebar Styles */
+.sd-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.sd-widget {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.sd-widget-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.sd-widget-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.sd-service-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sd-service-link {
+    display: block;
+    padding: 12px 18px;
+    background: #f8faff;
+    color: #1a1b3a;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.sd-service-link:hover,
+.sd-service-link.active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.sd-download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    background: #f8faff;
+    color: #1a1b3a;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.sd-download-btn:hover {
+    background: #1a1b3a;
+    color: #fff;
+}
+
+.sd-contact-widget {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.sd-contact-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.sd-contact-phone {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 10px 0 25px;
+}
+
+.sd-contact-btn {
+    background: #fff;
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.sd-contact-btn:hover {
+    background: #1a1b3a;
+    color: #fff;
+}
+
+/* Modern FAQ Section Styles */
+.sd-faq-modern-wrapper {
+    width: 90%;
+}
+
+.sd-custom-accordion.accordion {
+    --bs-accordion-border-color: #f1f4f9;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-bg: #f8faff;
+    --bs-accordion-active-color: var(--primary-color);
+}
+
+.sd-custom-accordion .accordion-item {
+    border: 1px solid #f1f4f9;
+    border-radius: 10px !important;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.sd-custom-accordion .accordion-button {
+    font-weight: 700;
+    color: #1a1b3a;
+    padding: 18px 25px;
+    font-size: 17px;
+}
+
+.sd-custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #f8faff;
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.sd-custom-accordion .accordion-body {
+    padding: 0 25px 20px;
+    color: #6a748a;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.sd-custom-accordion .accordion-button::after {
+    background-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+    .sd-advantage-img {
+        width: 200px;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 991px) {
+    .sd-sidebar {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .sd-advantage-box {
+        flex-direction: column;
+    }
+
+    .sd-advantage-img {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .sd-page-title {
+        font-size: 36px;
+    }
+
+    .sd-section-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sd-page-header {
+        padding: 70px 0;
+        margin-bottom: 50px;
+    }
+
+    .sd-page-title {
+        font-size: 28px;
+    }
+
+    .sd-section-title {
+        font-size: 24px;
+    }
+
+    .sd-section-subtitle {
+        font-size: 22px;
+    }
+
+    .sd-feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .sd-faq-modern-wrapper {
+        width: 100%;
+    }
+
+    .sd-custom-accordion .accordion-button {
+        font-size: 15px;
+        padding: 14px 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .sd-page-title {
+        font-size: 24px;
+    }
+
+    .sd-widget {
+        padding: 20px;
+    }
+
+    .sd-step-card {
+        padding: 20px;
+    }
+
+    .sd-contact-widget {
+        padding: 30px 20px;
+    }
+}
