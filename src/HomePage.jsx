@@ -28,7 +28,7 @@ const HomePage = () => {
                 <FAQ />
                 <Blog />
                 <CTA />               
-              
+            
                 
             </main>
             
