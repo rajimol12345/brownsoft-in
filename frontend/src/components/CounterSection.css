@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap');
+
+.counter-section-premium {
+    position: relative;
+    background-image: url('../assets/images/about-hero-bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 120px 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.counter-overlay-premium {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(11, 21, 46, 0.95) 0%, rgba(0, 29, 61, 0.85) 100%);
+    z-index: 1;
+}
+
+.counter-accent-premium {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(18, 78, 187, 0.2) 0%, transparent 70%);
+    z-index: 2;
+    filter: blur(40px);
+}
+
+.counter-accent-premium.top-left {
+    top: -150px;
+    left: -150px;
+}
+
+.counter-accent-premium.bottom-right {
+    bottom: -150px;
+    right: -150px;
+}
+
+.counter-section-premium .container {
+    position: relative;
+    z-index: 5;
+}
+
+.counter-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.counter-item-premium {
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+.counter-item-premium:hover {
+    transform: translateY(-10px);
+}
+
+.counter-icon-wrap-premium {
+    font-size: 48px;
+    color: #124ebb;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 10px rgba(18, 78, 187, 0.3));
+}
+
+.counter-val-premium {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    line-height: 1;
+    background: linear-gradient(180deg, #fff 40%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.counter-desc-premium {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .counter-val-premium {
+        font-size: 2.8rem;
+    }
+
+    .counter-grid-premium {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .counter-grid-premium {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    .counter-section-premium {
+        padding: 100px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .counter-grid-premium {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .counter-val-premium {
+        font-size: 2.5rem;
+    }
+
+    .counter-section-premium {
+        padding: 80px 0;
+    }
+}
