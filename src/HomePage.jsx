@@ -11,6 +11,8 @@ import FAQ from './components/FAQ';
 import Blog from './components/Blog';
 import CTA from './components/CTA';
 
+
+
 const HomePage = () => {
     return (
         <>
@@ -26,7 +28,7 @@ const HomePage = () => {
                 <Team />
                 <FAQ />
                 <Blog />
-                <CTA />
+                <CTA />               
             </main>
             
         </>
