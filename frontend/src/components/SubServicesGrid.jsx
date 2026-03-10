@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './SubServicesGrid.css';
 
 const SubServicesGrid = ({ services, title, subtitle }) => {
@@ -16,6 +17,11 @@ const SubServicesGrid = ({ services, title, subtitle }) => {
                         </div>
                         <h3 className="ssg-title">{service.title}</h3>
                         {service.desc && <p className="ssg-desc">{service.desc}</p>}
+                        {service.path && (
+                            <Link to={service.path} className="ssg-link">
+                                Learn More <i className="fas fa-arrow-right"></i>
+                            </Link>
+                        )}
                     </div>
                 ))}
             </div>

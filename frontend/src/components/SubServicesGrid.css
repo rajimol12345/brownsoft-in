@@ -8,14 +8,14 @@
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 15px;
-    color: var(--wibita-dark);
+    color: #0b152e;
 }
 
 .ssg-section-subtitle {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 40px;
-    color: #666;
+    color: #64748b;
     font-size: 1.1rem;
 }
 
@@ -31,8 +31,8 @@
     padding: 35px 25px;
     text-align: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 30px rgba(108, 41, 179, 0.05);
-    border: 1px solid rgba(108, 41, 179, 0.05);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.05);
+    border: 1px solid rgba(37, 99, 235, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,15 +40,15 @@
 
 .ssg-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(108, 41, 179, 0.12);
-    border-color: rgba(108, 41, 179, 0.2);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.12);
+    border-color: rgba(37, 99, 235, 0.2);
 }
 
 .ssg-icon {
     width: 70px;
     height: 70px;
-    background: var(--wibita-light-purple);
-    color: var(--wibita-purple);
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@
 }
 
 .ssg-card:hover .ssg-icon {
-    background: var(--wibita-purple);
+    background: #2563eb;
     color: #ffffff;
     transform: rotate(10deg);
 }
@@ -67,16 +67,31 @@
 .ssg-title {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #0D2B5B;
+    color: #0b152e;
     margin-bottom: 12px;
     line-height: 1.4;
 }
 
 .ssg-desc {
     font-size: 0.95rem;
-    color: #666;
+    color: #64748b;
     line-height: 1.6;
-    margin: 0;
+    margin-bottom: 20px;
+}
+
+.ssg-link {
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    margin-top: auto;
+}
+
+.ssg-link:hover {
+    gap: 12px;
 }
 
 @media (max-width: 1200px) {

@@ -7,139 +7,118 @@ const ServiceDetailLayout = ({
     heroTitle,
     breadcrumbs,
     sidebarMenu,
-    openingHours,
     mainImage,
     description,
-    featureBoxes,
-    subSection,
-    bottomFeatures,
+    subDescription,
+    features,
     faqs,
-    extraContent
+    steps,
+    advantage
 }) => {
+    // Default steps if none provided
+    const defaultSteps = [
+        { title: 'Discovery & Research', desc: 'We dive deep into your brand values and market trends.', icon: 'fas fa-layer-group' },
+        { title: 'Concept & Creation', desc: 'Our editors bring concepts to life with multiple iterations.', icon: 'fas fa-pen-nib' },
+        { title: 'Final Delivery', desc: 'Receive high-quality video assets ready for any platform.', icon: 'fas fa-film' }
+    ];
+
+    const displaySteps = steps || defaultSteps;
+
     return (
         <div className="sdl-page">
-            {/* ── HERO ── */}
-            <section className="sdl-hero">
+            {/* ── PAGE HEADER ── */}
+            <header className="sd-page-header">
                 <div className="container">
-                    <h1 className="sdl-hero-title">{heroTitle || title}</h1>
-                    <ul className="sdl-breadcrumb">
-                        {breadcrumbs.map((bc, index) => (
-                            <React.Fragment key={index}>
-                                <li>
-                                    {bc.path ? (
-                                        <Link to={bc.path}>{bc.label}</Link>
-                                    ) : (
-                                        <span className="active">{bc.label}</span>
-                                    )}
-                                </li>
-                                {index < breadcrumbs.length - 1 && (
-                                    <li className="separator"><i className="fas fa-chevron-right"></i></li>
-                                )}
+                    <h1 className="sd-page-title">{heroTitle || title}</h1>
+                    <div className="sd-breadcrumb">
+                        {breadcrumbs.map((bc, idx) => (
+                            <React.Fragment key={idx}>
+                                {bc.path ? <Link to={bc.path}>{bc.label}</Link> : <span>{bc.label}</span>}
+                                {idx < breadcrumbs.length - 1 && <span>/</span>}
                             </React.Fragment>
                         ))}
-                    </ul>
+                    </div>
                 </div>
-            </section>
+            </header>
 
-            {/* ── BODY ── */}
-            <section className="sdl-body">
-                <div className="container sdl-container">
-
-                    {/* Sidebar */}
-                    <aside className="sdl-sidebar">
-                        <div className="sdl-menu-card">
-                            <h3 className="sdl-sidebar-title">All Services</h3>
-                            <ul className="sdl-menu-list">
-                                {sidebarMenu.map((item, index) => (
-                                    <li key={index} className="sdl-menu-item">
-                                        <Link
-                                            to={item.path}
-                                            className={`sdl-menu-link ${item.active ? 'active' : ''}`}
-                                        >
-                                            {item.label}
-                                            <i className="fas fa-long-arrow-alt-right"></i>
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {openingHours && (
-                            <div className="sdl-hours-card">
-                                <h3 className="sdl-sidebar-title">Opening Hours</h3>
-                                <ul className="sdl-hours-list">
-                                    {openingHours.map((item, index) => (
-                                        <li key={index} className="sdl-hours-item">
-                                            <i className="far fa-clock"></i>
-                                            <span>{item.day}:</span>
-                                            <span className="time">{item.time}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        )}
-
-                        <div className="sdl-help-box">
-                            <div className="sdl-help-icon">
-                                <i className="fas fa-phone-alt"></i>
-                            </div>
-                            <h3>Need Help? Call Here</h3>
-                            <span className="phone">+208-555-0112</span>
-                        </div>
-                    </aside>
-
-                    {/* Main Content */}
-                    <main className="sdl-main">
-                        <div className="sdl-main-image">
-                            <img src={mainImage} alt={title} />
-                        </div>
-
-                        <h2 className="sdl-content-title">{title}</h2>
-
-                        <div className="sdl-description">
+            <div className="container sdl-container">
+                {/* ── MAIN CONTENT (LEFT) ── */}
+                <main className="sd-main-content">
+                    <div className="sd-content-section">
+                        <img src={mainImage} alt={title} className="sd-main-image" />
+                        
+                        <h2 className="sd-section-title">{title}</h2>
+                        <div className="sd-text">
                             {description}
                         </div>
 
-                        {/* Feature Grid */}
-                        <div className="sdl-feature-grid">
-                            {featureBoxes.map((box, index) => (
-                                <div key={index} className="sdl-feature-box">
-                                    <div className="sdl-ficon">
-                                        <i className={box.icon}></i>
+                        {subDescription && (
+                            <p className="sd-text">
+                                {subDescription}
+                            </p>
+                        )}
+
+                        {features && (
+                            <ul className="sd-feature-list">
+                                {features.map((item, idx) => (
+                                    <li key={idx} className="sd-feature-item">
+                                        <i className="fas fa-check-square sd-feature-icon"></i>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+
+                        <h2 className="sd-section-title">3 Steps to Your New Design</h2>
+                        <p className="sd-text">
+                            We follow a streamlined process to ensure your project is delivered on time and exceeds your expectations.
+                        </p>
+
+                        <div className="sd-steps-row">
+                            {displaySteps.map((step, idx) => (
+                                <div key={idx} className="sd-step-card">
+                                    <div className="sd-step-icon">
+                                        <i className={step.icon}></i>
                                     </div>
-                                    <div className="sdl-fcontent">
-                                        <h4>{box.title}</h4>
-                                        <p>{box.description}</p>
-                                    </div>
+                                    <h4 className="sd-step-title">{step.title}</h4>
+                                    <p className="sd-text small mb-0">{step.desc}</p>
                                 </div>
                             ))}
                         </div>
 
-                        {/* Sub Section */}
-                        {subSection && (
-                            <div className="sdl-sub-section">
-                                <div className="sdl-sub-image">
-                                    <img src={subSection.image} alt={subSection.title} />
+                        {advantage && (
+                            <>
+                                <h3 className="sd-section-subtitle">Key Advantages</h3>
+                                <div className="sd-advantage-box">
+                                    <img src={advantage.image} alt="Advantage" className="sd-advantage-img" />
+                                    <div className="sd-advantage-content">
+                                        <p className="sd-text">
+                                            {advantage.text || "Reliable services that prioritize client satisfaction and visual excellence."}
+                                        </p>
+                                        <ul className="sd-feature-list" style={{ gridTemplateColumns: '1fr' }}>
+                                            {(advantage.points || features || []).slice(0, 4).map((point, idx) => (
+                                                <li key={idx} className="sd-feature-item">
+                                                    <i className="fas fa-check-square sd-feature-icon"></i>
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div className="sdl-sub-content">
-                                    <h3>{subSection.title}</h3>
-                                    <p>{subSection.description}</p>
-                                </div>
-                            </div>
+                            </>
                         )}
 
-                        {/* FAQ Section */}
                         {faqs && (
-                            <div className="sdl-faq-section">
-                                <h3 className="sdl-content-title">Most Comment Question</h3>
-                                <div className="sdl-faq-accordion">
-                                    {faqs.map((faq, index) => (
-                                        <details key={index} className="sdl-faq-item">
-                                            <summary className="sdl-faq-summary">
-                                                {faq.question}
-                                                <i className="fas fa-plus"></i>
+                            <div className="sd-faq-modern-wrapper">
+                                <h3 className="sd-section-subtitle mb-4">Common Questions</h3>
+                                <div className="sd-custom-accordion">
+                                    {faqs.map((faq, idx) => (
+                                        <details key={idx} className="sd-faq-item">
+                                            <summary className="sd-faq-summary">
+                                                <span><i className="fas fa-question-circle me-2"></i> {faq.question}</span>
+                                                <i className="fas fa-chevron-down"></i>
                                             </summary>
-                                            <div className="sdl-faq-content">
+                                            <div className="sd-faq-content">
                                                 <p>{faq.answer}</p>
                                             </div>
                                         </details>
@@ -147,15 +126,56 @@ const ServiceDetailLayout = ({
                                 </div>
                             </div>
                         )}
+                    </div>
+                </main>
 
-                        {extraContent && (
-                            <div className="sdl-extra-content">
-                                {extraContent}
-                            </div>
-                        )}
-                    </main>
-                </div>
-            </section>
+                {/* ── SIDEBAR (RIGHT) ── */}
+                <aside className="sd-sidebar">
+                    {/* Services Menu */}
+                    <div className="sd-widget">
+                        <h4 className="sd-widget-title">Our Expertise</h4>
+                        <div className="sd-service-menu">
+                            {sidebarMenu.map((item, idx) => (
+                                <Link 
+                                    key={idx} 
+                                    to={item.path || '#!'} 
+                                    className={`sd-service-link ${item.active ? 'active' : ''}`}
+                                >
+                                    {item.label}
+                                    <i className="fas fa-arrow-right"></i>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Brochure Widget */}
+                    <div className="sd-widget">
+                        <h4 className="sd-widget-title">Free Brochure</h4>
+                        <button className="sd-download-btn">
+                            <i className="fas fa-file-pdf" style={{ color: '#ff0000' }}></i>
+                            <span>DOWNLOAD PDF</span>
+                        </button>
+                        <button className="sd-download-btn">
+                            <i className="fas fa-file-word" style={{ color: '#2b579a' }}></i>
+                            <span>DOWNLOAD DOC</span>
+                        </button>
+                    </div>
+
+                    {/* Contact Widget */}
+                    <div className="sd-widget sd-contact-widget">
+                        <div className="sd-contact-icon">
+                            <i className="fas fa-phone-alt"></i>
+                        </div>
+                        <h4 className="sd-widget-title" style={{ color: '#fff', border: 'none', padding: 0 }}>
+                            Have Questions? Call Us
+                        </h4>
+                        <p className="sd-contact-phone">92 666 888 0000</p>
+                        <Link to="/contact" className="sd-contact-btn">
+                            Get in Touch <i className="fas fa-arrow-right ms-2"></i>
+                        </Link>
+                    </div>
+                </aside>
+            </div>
         </div>
     );
 };
