@@ -56,7 +56,7 @@ const GraphicServiceLayout = ({
     return (
         <div className="sd-page-wrapper">
             {/* Page Header */}
-            <div className="sd-page-header">
+            <div className="sd-page-header sd-header-graphic-sub">
                 <Container>
                     <h1 className="sd-page-title">{title}</h1>
                     <div className="sd-breadcrumb">
