@@ -10,6 +10,12 @@
     margin-bottom: 80px;
 }
 
+.sd-header-graphics {
+    background: linear-gradient(rgba(18, 78, 187, 0.85), rgba(10, 45, 110, 0.9)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
 .sd-page-title {
     font-size: 48px;
     font-weight: 800;
@@ -69,22 +75,23 @@
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 30px;
     margin-bottom: 40px;
 }
 
 .sd-feature-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     color: #1a1b3a;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .sd-feature-icon {
-    color: var(--primary-color);
-    font-size: 20px;
+    color: #124ebb;
+    font-size: 18px;
     flex-shrink: 0;
 }
 
@@ -104,16 +111,17 @@
 }
 
 .sd-step-icon {
-    width: 70px;
-    height: 70px;
-    background: var(--primary-color);
+    width: 75px;
+    height: 75px;
+    background: #124ebb;
     color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 30px;
+    margin: 0 auto 25px;
+    font-size: 32px;
+    box-shadow: 0 10px 20px rgba(18, 78, 187, 0.2);
 }
 
 .sd-step-title {
@@ -152,6 +160,50 @@
     border-radius: 15px;
     margin-bottom: 30px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.sd-expertise-widget {
+    background: #fff;
+    color: #1a1b3a;
+}
+
+.sd-expertise-widget .sd-widget-title {
+    color: #1a1b3a;
+}
+
+.sd-expertise-widget .sd-service-menu {
+    gap: 8px;
+}
+
+.sd-expertise-widget .sd-service-link {
+    background: #f8faff;
+    color: #1a1b3a;
+    padding: 12px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    border-bottom: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sd-expertise-widget .sd-service-link:hover {
+    background: #f0f4ff;
+    color: #124ebb;
+}
+
+.sd-expertise-widget .sd-service-link.active {
+    background: #124ebb;
+    color: #fff;
+}
+
+.sd-expertise-widget .sd-service-link.active svg {
+    color: #fff;
+}
+
+.sd-expertise-widget .sd-service-link svg {
+    color: #124ebb;
+    font-size: 14px;
 }
 
 .sd-widget-title {
@@ -220,10 +272,11 @@
 }
 
 .sd-contact-widget {
-    background: var(--primary-color);
+    background: #124ebb;
     color: #fff;
     text-align: center;
-    padding: 40px 30px;
+    padding: 50px 30px;
+    border-radius: 15px;
 }
 
 .sd-contact-icon {
@@ -232,20 +285,23 @@
 }
 
 .sd-contact-phone {
-    font-size: 24px;
-    font-weight: 800;
-    margin: 10px 0 25px;
+    font-size: 28px;
+    font-weight: 900;
+    margin: 15px 0 30px;
+    color: #fff;
 }
 
 .sd-contact-btn {
     background: #fff;
-    color: var(--primary-color);
-    padding: 12px 30px;
-    border-radius: 5px;
+    color: #124ebb;
+    padding: 14px 35px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .sd-contact-btn:hover {
@@ -297,27 +353,49 @@
     background-size: 0.9rem;
 }
 
-/* Responsive Styles */
+/* ========================================
+   RESPONSIVE STYLES — ALL DEVICES
+   ======================================== */
+
+/* Large Desktop (1400px+) */
+@media (min-width: 1400px) {
+    .sd-page-title {
+        font-size: 56px;
+    }
+
+    .sd-section-title {
+        font-size: 40px;
+    }
+
+    .sd-advantage-img {
+        width: 300px;
+        min-width: 300px;
+    }
+}
+
+/* Desktop / Laptop (1200px – 1399px) — default styles apply */
+
+/* Large Tablet / Small Laptop (992px – 1199px) */
 @media (max-width: 1199px) {
     .sd-advantage-img {
         width: 200px;
         min-width: 200px;
     }
+
+    .sd-section-title {
+        font-size: 32px;
+    }
+
+    .sd-widget-title {
+        font-size: 22px;
+    }
 }
 
+/* Tablet Landscape / Medium Screens (768px – 991px) */
 @media (max-width: 991px) {
-    .sd-sidebar {
-        position: static;
-        margin-top: 40px;
-    }
-
-    .sd-advantage-box {
-        flex-direction: column;
-    }
-
-    .sd-advantage-img {
-        width: 100%;
-        min-width: unset;
+    .sd-page-header {
+        padding: 80px 0;
+        margin-bottom: 60px;
     }
 
     .sd-page-title {
@@ -327,16 +405,53 @@
     .sd-section-title {
         font-size: 28px;
     }
+
+    .sd-section-subtitle {
+        font-size: 24px;
+    }
+
+    .sd-sidebar {
+        position: static;
+        margin-top: 50px;
+    }
+
+    .sd-advantage-box {
+        flex-direction: column;
+    }
+
+    .sd-advantage-img {
+        width: 100%;
+        min-width: unset;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .sd-step-card {
+        padding: 25px 20px;
+    }
+
+    .sd-faq-modern-wrapper {
+        width: 100%;
+    }
 }
 
+/* Tablet Portrait (600px – 767px) */
 @media (max-width: 767px) {
     .sd-page-header {
-        padding: 70px 0;
-        margin-bottom: 50px;
+        padding: 65px 15px;
+        margin-bottom: 45px;
     }
 
     .sd-page-title {
         font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .sd-breadcrumb {
+        flex-wrap: wrap;
+        font-size: 14px;
+        justify-content: center;
+        gap: 6px;
     }
 
     .sd-section-title {
@@ -347,8 +462,19 @@
         font-size: 22px;
     }
 
+    .sd-text {
+        font-size: 15px;
+    }
+
     .sd-feature-list {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .sd-main-image {
+        border-radius: 10px;
+        margin-bottom: 30px;
+        max-height: 300px;
     }
 
     .sd-faq-modern-wrapper {
@@ -359,22 +485,198 @@
         font-size: 15px;
         padding: 14px 18px;
     }
-}
 
-@media (max-width: 575px) {
-    .sd-page-title {
+    .sd-custom-accordion .accordion-body {
+        padding: 0 18px 16px;
+        font-size: 14px;
+    }
+
+    .sd-step-icon {
+        width: 60px;
+        height: 60px;
         font-size: 24px;
     }
 
-    .sd-widget {
-        padding: 20px;
+    .sd-step-title {
+        font-size: 18px;
     }
 
-    .sd-step-card {
-        padding: 20px;
+    .sd-widget-title {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Landscape / Large Phone (480px – 599px) */
+@media (max-width: 599px) {
+    .sd-page-header {
+        padding: 55px 15px;
+        margin-bottom: 35px;
+    }
+
+    .sd-page-title {
+        font-size: 26px;
+    }
+
+    .sd-section-title {
+        font-size: 22px;
+    }
+
+    .sd-section-subtitle {
+        font-size: 20px;
+    }
+
+    .sd-advantage-img {
+        max-height: 220px;
+    }
+
+    .sd-widget {
+        padding: 22px;
     }
 
     .sd-contact-widget {
-        padding: 30px 20px;
+        padding: 30px 22px;
+    }
+
+    .sd-contact-phone {
+        font-size: 20px;
+    }
+
+    .sd-contact-icon {
+        font-size: 42px;
+    }
+}
+
+/* Mobile Portrait (360px – 479px) */
+@media (max-width: 479px) {
+    .sd-page-header {
+        padding: 50px 12px;
+        margin-bottom: 30px;
+    }
+
+    .sd-page-title {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .sd-breadcrumb {
+        font-size: 12px;
+        gap: 4px;
+    }
+
+    .sd-section-title {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .sd-section-subtitle {
+        font-size: 18px;
+    }
+
+    .sd-text {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .sd-main-image {
+        border-radius: 8px;
+        max-height: 220px;
+        margin-bottom: 25px;
+    }
+
+    .sd-step-card {
+        padding: 18px 15px;
+    }
+
+    .sd-step-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+
+    .sd-step-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .sd-widget {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .sd-widget-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+    }
+
+    .sd-service-link {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .sd-download-btn {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .sd-contact-widget {
+        padding: 25px 18px;
+    }
+
+    .sd-contact-phone {
+        font-size: 18px;
+    }
+
+    .sd-contact-icon {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .sd-contact-btn {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+    .sd-custom-accordion .accordion-button {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    .sd-custom-accordion .accordion-body {
+        padding: 0 15px 14px;
+        font-size: 13px;
+    }
+}
+
+/* Extra Small Phones (below 360px) */
+@media (max-width: 359px) {
+    .sd-page-title {
+        font-size: 20px;
+    }
+
+    .sd-section-title {
+        font-size: 18px;
+    }
+
+    .sd-section-subtitle {
+        font-size: 16px;
+    }
+
+    .sd-text {
+        font-size: 13px;
+    }
+
+    .sd-main-image {
+        max-height: 180px;
+    }
+
+    .sd-widget {
+        padding: 14px;
+    }
+
+    .sd-service-link {
+        font-size: 12px;
+        padding: 9px 12px;
     }
 }

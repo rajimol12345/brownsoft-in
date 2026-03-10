@@ -5,9 +5,6 @@ import Services from './pages/Services';
 import VideoAnimation from './pages/VideoAnimation';
 import WebDesign from './pages/WebDesign';
 import GraphicsDesign from './pages/GraphicsDesign';
-import SEOMarketing from './pages/SEOMarketing';
-import AdminSupport from './pages/AdminSupport';
-import CivilArchitectural from './pages/CivilArchitectural';
 import Careers from './pages/Careers';
 import ShortsReels from './pages/VideoServices/ShortsReels';
 import YouTubeVlogs from './pages/VideoServices/YouTubeVlogs';
@@ -24,6 +21,20 @@ import ShortFilm from './pages/VideoServices/ShortFilm';
 import Travel from './pages/VideoServices/Travel';
 import SocialMediaAds from './pages/VideoServices/SocialMediaAds';
 import Infographic from './pages/VideoServices/Infographic';
+import UIUXWebsite from './pages/GraphicServices/UIUXWebsite';
+import InvitationCards from './pages/GraphicServices/InvitationCards';
+import LabelsPackaging from './pages/GraphicServices/LabelsPackaging';
+import UIUXMobile from './pages/GraphicServices/UIUXMobile';
+import BackgroundRemoval from './pages/GraphicServices/BackgroundRemoval';
+import AlbumDesigning from './pages/GraphicServices/AlbumDesigning';
+import PhotoEditing from './pages/GraphicServices/PhotoEditing';
+import Flyers from './pages/GraphicServices/Flyers';
+import BrochuresInfographics from './pages/GraphicServices/BrochuresInfographics';
+import BusinessCardsBillboards from './pages/GraphicServices/BusinessCardsBillboards';
+import FoodMenu from './pages/GraphicServices/FoodMenu';
+import LetterheadResume from './pages/GraphicServices/LetterheadResume';
+import SocialMediaBanners from './pages/GraphicServices/SocialMediaBanners';
+import LogoDesign from './pages/GraphicServices/LogoDesign';
 
 function App() {
   return (
@@ -52,9 +63,20 @@ function App() {
             <Route path="/services/video-animation/infographic" element={<Infographic />} />
             <Route path="/services/web-design" element={<WebDesign />} />
             <Route path="/services/graphics-design" element={<GraphicsDesign />} />
-            <Route path="/services/seo-marketing" element={<SEOMarketing />} />
-            <Route path="/services/admin-support" element={<AdminSupport />} />
-            <Route path="/services/civil-architectural" element={<CivilArchitectural />} />
+            <Route path="/services/graphics-design/ui-ux-website" element={<UIUXWebsite />} />
+            <Route path="/services/graphics-design/invitation-cards" element={<InvitationCards />} />
+            <Route path="/services/graphics-design/labels-packaging" element={<LabelsPackaging />} />
+            <Route path="/services/graphics-design/ui-ux-mobile" element={<UIUXMobile />} />
+            <Route path="/services/graphics-design/background-removal" element={<BackgroundRemoval />} />
+            <Route path="/services/graphics-design/album-designing" element={<AlbumDesigning />} />
+            <Route path="/services/graphics-design/photo-editing" element={<PhotoEditing />} />
+            <Route path="/services/graphics-design/flyers" element={<Flyers />} />
+            <Route path="/services/graphics-design/brochures-infographics" element={<BrochuresInfographics />} />
+            <Route path="/services/graphics-design/business-cards-billboards" element={<BusinessCardsBillboards />} />
+            <Route path="/services/graphics-design/food-menu" element={<FoodMenu />} />
+            <Route path="/services/graphics-design/letterhead-resume" element={<LetterheadResume />} />
+            <Route path="/services/graphics-design/social-media-banners" element={<SocialMediaBanners />} />
+            <Route path="/services/graphics-design/logo-design" element={<LogoDesign />} />
             <Route path="/careers" element={<Careers />} />
           </Routes>
         </main>

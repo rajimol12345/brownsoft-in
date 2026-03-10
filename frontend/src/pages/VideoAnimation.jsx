@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
-import { FiCheckSquare, FiLayers, FiPenTool, FiImage, FiPhoneCall, FiArrowRight, FiHelpCircle } from 'react-icons/fi';
+import { FiCheckSquare, FiLayers, FiPenTool, FiImage, FiPhoneCall, FiArrowRight, FiHelpCircle, FiChevronRight } from 'react-icons/fi';
 import { FaFilePdf, FaFileWord } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../style/service.css';
@@ -205,11 +205,12 @@ const VideoAnimation = () => {
                     <Col lg={4}>
                         <div className="sd-sidebar">
                             {/* Services Menu */}
-                            <div className="sd-widget">
+                            <div className="sd-widget sd-expertise-widget">
                                 <h4 className="sd-widget-title">Our Expertise</h4>
                                 <div className="sd-service-menu">
                                     {servicesList.map((item, index) => (
                                         <Link key={index} to={item.path} className="sd-service-link">
+                                            <FiChevronRight className="me-2" />
                                             {item.label}
                                         </Link>
                                     ))}
