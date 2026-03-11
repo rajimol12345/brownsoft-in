@@ -8,6 +8,7 @@ import graphicsImg from '../images/services/graphics_design.png';
 import seoImg from '../images/services/seo_marketing.png';
 import adminImg from '../images/services/admin_support.png';
 import civilImg from '../images/services/civil_engineering.png';
+import videoImg from '../images/services/video_animation.png';
 
 const services = [
     {
@@ -15,16 +16,16 @@ const services = [
         icon: 'fas fa-code',
         image: webImg,
         color: '#4ECDC4',
-        title: 'Web Design',
+        title: 'Web Design and Development',
         items: [
-            'Professional Web Design Company',
-            'Custom Website Design',
-            'Corporate Websites',
-            'Landing & Promo Pages',
-            'Small Business Websites',
-            'Website Redesign',
-            'E-commerce Websites',
-            'CMS Websites',
+            { name: 'Professional Web Design & Development Company', icon: 'fas fa-laptop-code' },
+            { name: 'Custom Website Design', icon: 'fas fa-magic' },
+            { name: 'Corporate Websites', icon: 'fas fa-building' },
+            { name: 'Landing & Promo Pages', icon: 'fas fa-rocket' },
+            { name: 'Small Business Websites', icon: 'fas fa-store' },
+            { name: 'Website Redesign', icon: 'fas fa-sync-alt' },
+            { name: 'E-commerce Websites', icon: 'fas fa-shopping-cart' },
+            { name: 'CMS Websites', icon: 'fas fa-user-edit' },
         ],
     },
     {
@@ -34,20 +35,20 @@ const services = [
         color: '#A78BFA',
         title: 'Graphics & Design',
         items: [
-            'UI UX Design For Websites',
-            'Invitation Cards, Postcards & Posters',
-            'Labels & Packaging Design',
-            'UI UX Design for Mobile Apps',
-            'Image Background Removal',
-            'Album Designing — Weddings & Real Estate',
-            'Photo Editing & Retouching',
-            'Craft Memorable Flyers',
-            'Brochures and Infographics',
-            'Design Business Cards & Billboards',
-            'Food Menu Design Services',
-            'Letterhead and Resume Design',
-            'Social Media Banners Design',
-            'Design Your Dream Logo',
+            { name: 'UI UX Design For Websites', icon: 'fas fa-window-restore' },
+            { name: 'Invitation Cards, Postcards & Posters', icon: 'fas fa-envelope-open-text' },
+            { name: 'Labels & Packaging Design', icon: 'fas fa-box-open' },
+            { name: 'UI UX Design for Mobile Apps', icon: 'fas fa-mobile-alt' },
+            { name: 'Image Background Removal', icon: 'fas fa-eraser' },
+            { name: 'Album Designing — Weddings & Real Estate', icon: 'fas fa-images' },
+            { name: 'Photo Editing & Retouching', icon: 'fas fa-magic' },
+            { name: 'Craft Memorable Flyers', icon: 'fas fa-paper-plane' },
+            { name: 'Brochures and Infographics', icon: 'fas fa-chart-pie' },
+            { name: 'Design Business Cards & Billboards', icon: 'fas fa-id-card' },
+            { name: 'Food Menu Design Services', icon: 'fas fa-utensils' },
+            { name: 'Letterhead and Resume Design', icon: 'fas fa-file-invoice' },
+            { name: 'Social Media Banners Design', icon: 'fas fa-ad' },
+            { name: 'Design Your Dream Logo', icon: 'fas fa-pen-nib' },
         ],
     },
     {
@@ -57,18 +58,18 @@ const services = [
         color: '#FB923C',
         title: 'SEO & Marketing',
         items: [
-            'Complete SEO Package',
-            'DappRadar Banner Ads',
-            'Etherscan Ads Management',
-            'BscScan Ads Management',
-            'Banner Advertising Campaigns',
-            'Google Adwords Management',
-            'YouTube Advertising Campaigns',
-            'Twitter Ads Management',
-            'Facebook & Instagram Ads',
-            'Page Creation and Design',
-            'Reddit Promotion',
-            'Social Media Management',
+            { name: 'Complete SEO Package', icon: 'fas fa-search-plus' },
+            { name: 'DappRadar Banner Ads', icon: 'fas fa-broadcast-tower' },
+            { name: 'Etherscan Ads Management', icon: 'fas fa-ethereum' },
+            { name: 'BscScan Ads Management', icon: 'fas fa-coins' },
+            { name: 'Banner Advertising Campaigns', icon: 'fas fa-ad' },
+            { name: 'Google Adwords Management', icon: 'fas fa-google' },
+            { name: 'YouTube Advertising Campaigns', icon: 'fas fa-youtube' },
+            { name: 'Twitter Ads Management', icon: 'fas fa-twitter' },
+            { name: 'Facebook & Instagram Ads', icon: 'fas fa-facebook' },
+            { name: 'Page Creation and Design', icon: 'fas fa-file-code' },
+            { name: 'Reddit Promotion', icon: 'fas fa-reddit-alien' },
+            { name: 'Social Media Management', icon: 'fas fa-users-cog' },
         ],
     },
     {
@@ -78,15 +79,15 @@ const services = [
         color: '#34D399',
         title: 'Admin Support',
         items: [
-            '24/7 Live Email & Chat Support',
-            'Website Content Management',
-            'E-commerce Website Maintenance',
-            'Technical Support for Websites',
-            'Website Content & Image Updates',
-            'Virtual Administration Support',
-            'E-commerce & Website Data Entry',
-            'Image Annotation & Data Processing',
-            'Accurate & Efficient Data Entry',
+            { name: '24/7 Live Email & Chat Support', icon: 'fas fa-headset' },
+            { name: 'Website Content Management', icon: 'fas fa-edit' },
+            { name: 'E-commerce Website Maintenance', icon: 'fas fa-toolbox' },
+            { name: 'Technical Support for Websites', icon: 'fas fa-tools' },
+            { name: 'Website Content & Image Updates', icon: 'fas fa-sync' },
+            { name: 'Virtual Administration Support', icon: 'fas fa-user-tie' },
+            { name: 'E-commerce & Website Data Entry', icon: 'fas fa-keyboard' },
+            { name: 'Image Annotation & Data Processing', icon: 'fas fa-tags' },
+            { name: 'Accurate & Efficient Data Entry', icon: 'fas fa-file-excel' },
         ],
     },
     {
@@ -96,11 +97,28 @@ const services = [
         color: '#FBBF24',
         title: 'Civil Engineering',
         items: [
-            'Planning & Design Services',
-            'Construction & Project Management',
-            'Structural Engineering Services',
-            'Surveying & Land Development',
-            'Infrastructure & Public Works',
+            { name: 'Planning & Design Services', icon: 'fas fa-drafting-compass' },
+            { name: 'Construction & Project Management', icon: 'fas fa-tasks' },
+            { name: 'Structural Engineering Services', icon: 'fas fa-cube' },
+            { name: 'Surveying & Land Development', icon: 'fas fa-map-marked-alt' },
+            { name: 'Infrastructure & Public Works', icon: 'fas fa-road' },
+        ],
+    },
+    {
+        id: 'video',
+        icon: 'fas fa-video',
+        image: videoImg,
+        color: '#F472B6',
+        title: 'Video & Animation',
+        items: [
+            { name: 'Promotional Videos', icon: 'fas fa-film' },
+            { name: '2D & 3D Animation', icon: 'fas fa-cubes' },
+            { name: 'Motion Graphics', icon: 'fas fa-wind' },
+            { name: 'Video Editing & Post-Production', icon: 'fas fa-cut' },
+            { name: 'Explainer Videos', icon: 'fas fa-lightbulb' },
+            { name: 'Social Media Content', icon: 'fas fa-share-alt' },
+            { name: 'Logo Animation', icon: 'fas fa-star' },
+            { name: 'YouTube Video Production', icon: 'fas fa-play-circle' },
         ],
     },
 ];
@@ -186,7 +204,7 @@ const Header = () => {
 
                             {/* Services Dropdown */}
                             <li
-                                className="nav-dropdown-item"
+                                className="nav-dropdown-item desktop-only"
                                 onMouseEnter={() => setMegaOpen(true)}
                                 onMouseLeave={() => setMegaOpen(false)}
                             >
@@ -232,7 +250,12 @@ const Header = () => {
                                     {services.map((cat) => (
                                         <div className="mobile-cat" key={cat.id}>
                                             <div className="mobile-cat-header" style={{ '--cat-color': cat.color }}>
-                                                <i className={cat.icon}></i> {cat.title}
+                                                <div className="mobile-cat-img-wrap">
+                                                    <img src={cat.image} alt={cat.title} className="mobile-cat-image" />
+                                                </div>
+                                                <div className="mobile-cat-title-wrap">
+                                                    <span className="mobile-cat-badge">{cat.title}</span>
+                                                </div>
                                             </div>
                                         </div>
                                     ))}
