@@ -154,7 +154,7 @@ const SeoMarketing = () => {
     return (
         <div className="sd-page-wrapper">
             {/* Page Header */}
-            <div className="sd-page-header">
+            <div className="sd-page-headers">
                 <Container>
                     <h1 className="sd-page-title">{currentData.title}</h1>
                     <div className="sd-breadcrumb">

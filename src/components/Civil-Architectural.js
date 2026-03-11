@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
-import { FiCheckSquare, FiMap, FiHardDrive, FiTriangle, FiPhoneCall, FiArrowRight, FiHelpCircle, FiTool, FiPenTool } from 'react-icons/fi';
+import { FiCheckSquare, FiTriangle, FiPhoneCall, FiArrowRight, FiHelpCircle, FiTool, FiPenTool } from 'react-icons/fi';
 import { FaFilePdf, FaFileWord } from 'react-icons/fa';
 import '../style/Civil-Architectural.css';
 
@@ -91,7 +91,7 @@ const CivilArchitectural = () => {
     return (
         <div className="sd-page-wrapper">
             {/* Page Header */}
-            <div className="sd-page-header">
+            <div className="sd-page-headerc">
                 <Container>
                     <h1 className="sd-page-title">{currentData.title}</h1>
                     <div className="sd-breadcrumb">

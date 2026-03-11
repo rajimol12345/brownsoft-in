@@ -9,8 +9,7 @@ import Testimonials from './components/Testimonials';
 import Team from './components/Team';
 import FAQ from './components/FAQ';
 import Blog from './components/Blog';
-import CTA from './components/CTA'
-
+import CTA from './components/CTA';
 
 const HomePage = () => {
     return (
@@ -29,7 +28,7 @@ const HomePage = () => {
                 <Blog />
                 <CTA />               
             
-                
+        
             </main>
             
         </>
