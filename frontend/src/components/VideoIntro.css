@@ -1,0 +1,59 @@
+.video-intro-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.video-intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.intro-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0b152e;
+    margin-bottom: 30px;
+}
+
+.intro-title span {
+    color: #2b95ff;
+}
+
+.intro-description {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btn-primary-glow {
+    background: #ff9d44;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 157, 68, 0.3);
+    margin-top: 20px;
+}
+
+.btn-primary-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 157, 68, 0.4);
+    background: #ff8c21;
+}
+
+@media (max-width: 768px) {
+    .intro-title {
+        font-size: 2.2rem;
+    }
+
+    .video-intro-section {
+        padding: 60px 0;
+    }
+}

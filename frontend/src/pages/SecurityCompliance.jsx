@@ -1,0 +1,58 @@
+import React from 'react';
+import PremiumServiceLayout from '../components/PremiumServiceLayout';
+import PremiumHero from '../components/PremiumHero';
+import PremiumIntro from '../components/PremiumIntro';
+
+const SecurityCompliance = () => {
+    const securityServices = [
+        { icon: 'fas fa-shield-virus', title: 'Cyber Security', desc: 'Advanced threat protection and real-time monitoring to defend your digital assets.' },
+        { icon: 'fas fa-user-lock', title: 'Identity Management', desc: 'Secure access controls and biometric authentication for sensitive enterprise systems.' },
+        { icon: 'fas fa-file-contract', title: 'Compliance Audits', desc: 'Rigorous testing to ensure your business meets ISO, GDPR, and NIST standards.' },
+        { icon: 'fas fa-network-wired', title: 'Network Security', desc: 'Robust firewall configurations and intrusion detection systems for zero-trust environments.' },
+        { icon: 'fas fa-user-shield', title: 'Staff Training', desc: 'Professional security awareness programs to eliminate the human-error risk factor.' },
+        { icon: 'fas fa-database', title: 'Data Encryption', desc: 'High-level cryptographic solutions to protect your proprietary information at rest and in transit.' }
+    ];
+
+    const data = {
+        title: 'Security & Compliance',
+        heroSubtitle: 'Fortifying Your Business Against Modern Digital Threats',
+        heroImage: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200',
+        introTitle: 'Where Proactive Defense Accents Enterprise Trust',
+        introSubtitle: 'Zero-Trust Security Frameworks',
+        introDescription1: 'In an increasingly connected world, security is not an optional feature; it is the foundation of trust. Protecting your data and maintaining regulatory compliance are critical for business longevity and reputation.',
+        introDescription2: 'Brownsoft provides enterprise-grade security and compliance consulting. We don\'t just react to threats; we build proactive shields that ensure your digital infrastructure remains impervious to the evolving landscape of cyber risks.',
+        introImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000',
+        services: securityServices,
+        faqs: [
+            {
+                question: "Do you offer 24/7 security monitoring?",
+                answer: "Yes, our Security Operations Center (SOC) provides round-the-clock monitoring and instant incident response for all premium clients."
+            },
+            {
+                question: "Can you help us with GDPR compliance?",
+                answer: "Absolutely. We provide full compliance audits and implementation frameworks for GDPR, HIPAA, and various international data standards."
+            },
+            {
+                question: "What is your approach to zero-trust?",
+                answer: "We implement strict identity verification and continuous authentication across every layer of your network architecture."
+            }
+        ],
+        quoteImage: "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=1000"
+    };
+
+    return (
+        <PremiumServiceLayout
+            {...data}
+            customHero={<PremiumHero title={data.title} subtitle={data.heroSubtitle} heroImage={data.heroImage} />}
+            customIntro={<PremiumIntro
+                title={data.introTitle}
+                subtitle={data.introSubtitle}
+                description1={data.introDescription1}
+                description2={data.introDescription2}
+                image={data.introImage}
+            />}
+        />
+    );
+};
+
+export default SecurityCompliance;

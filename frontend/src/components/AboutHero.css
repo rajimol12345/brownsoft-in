@@ -1,0 +1,119 @@
+.about-hero {
+    background-image: url('../assets/images/about-hero-bg.jpg');
+    background-color: #0b152e;
+    /* Dark navy base matching image */
+    background-size: cover;
+    background-position: center right;
+    min-height: 450px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 20, 40, 0.92) 0%, rgba(0, 53, 102, 0.85) 100%);
+    /* Stronger blue gradient overlay */
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about-hero-container {
+    position: relative;
+    z-index: 5;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-main-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+}
+
+.breadcrumb ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.breadcrumb ul li {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.breadcrumb a {
+    color: #124ebb;
+    /* Lighter purplish blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #ffffff;
+}
+
+.breadcrumb .separator {
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin: 0 6px;
+}
+
+.breadcrumb .active {
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .hero-main-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-main-title {
+        font-size: 2.8rem;
+    }
+
+    .about-hero {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-main-title {
+        font-size: 2.2rem;
+    }
+
+    .about-hero {
+        min-height: 300px;
+    }
+}

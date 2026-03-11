@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Varela+Round&display=swap');
+
+:root {
+  --primary-color: #124ebb;
+  --secondary-color: #0c0c0c;
+  --text-gray: #666666;
+  --white: #ffffff;
+  --heading-font: 'Varela Round', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  /* Wibita Theme Colors - Updated to #124ebb blue */
+  --wibita-purple: #124ebb;
+  --wibita-orange: #00D4FF;
+  --wibita-light-purple: #ebf2ff;
+  --wibita-dark: #0a2d6e;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--white);
+  color: var(--secondary-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 50px 0;
+}
+
+@media (max-width: 992px) {
+  .section-padding {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 30px 0;
+  }
+
+  html {
+    font-size: 15px;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Global Grid Helper */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
