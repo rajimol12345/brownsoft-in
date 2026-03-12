@@ -1,7 +1,7 @@
 import React from 'react';
-import PremiumServiceLayout from '../components/PremiumServiceLayout';
-import PremiumHero from '../components/PremiumHero';
-import PremiumIntro from '../components/PremiumIntro';
+import PremiumServiceLayout from '../components/PremiumServiceLayout.jsx';
+import PremiumHero from '../components/PremiumHero.jsx';
+import PremiumIntro from '../components/PremiumIntro.jsx';
 
 const CivilArchitectural = () => {
     const civilServices = [

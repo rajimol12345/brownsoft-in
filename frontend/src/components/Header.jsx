@@ -1,14 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
-import logo from '../images/logo.png';
+import logo from '@images/logo.png';
 
 // Service Images
-import webImg from '../images/services/web_design.png';
-import graphicsImg from '../images/services/graphics_design.png';
-import seoImg from '../images/services/seo_marketing.png';
-import adminImg from '../images/services/admin_support.png';
-import civilImg from '../images/services/civil_engineering.png';
-import videoImg from '../images/services/video_animation.png';
+import webImg from '@images/services/web_design.png';
+import graphicsImg from '@images/services/graphics_design.png';
+import seoImg from '@images/services/seo_marketing.png';
+import adminImg from '@images/services/admin_support.png';
+import civilImg from '@images/services/civil_engineering.png';
+import videoImg from '@images/services/video_animation.png';
 
 const services = [
     {
@@ -17,6 +18,7 @@ const services = [
         image: webImg,
         color: '#4ECDC4',
         title: 'Web Design and Development',
+        path: '/services/web-design',
         items: [
             { name: 'Professional Web Design & Development Company', icon: 'fas fa-laptop-code' },
             { name: 'Custom Website Design', icon: 'fas fa-magic' },
@@ -34,6 +36,7 @@ const services = [
         image: graphicsImg,
         color: '#A78BFA',
         title: 'Graphics & Design',
+        path: '/services/graphics-design',
         items: [
             { name: 'UI UX Design For Websites', icon: 'fas fa-window-restore' },
             { name: 'Invitation Cards, Postcards & Posters', icon: 'fas fa-envelope-open-text' },
@@ -57,6 +60,7 @@ const services = [
         image: seoImg,
         color: '#FB923C',
         title: 'SEO & Marketing',
+        path: '/services/seo-marketing',
         items: [
             { name: 'Complete SEO Package', icon: 'fas fa-search-plus' },
             { name: 'DappRadar Banner Ads', icon: 'fas fa-broadcast-tower' },
@@ -78,6 +82,7 @@ const services = [
         image: adminImg,
         color: '#34D399',
         title: 'Admin Support',
+        path: '/services/admin-support',
         items: [
             { name: '24/7 Live Email & Chat Support', icon: 'fas fa-headset' },
             { name: 'Website Content Management', icon: 'fas fa-edit' },
@@ -96,6 +101,7 @@ const services = [
         image: civilImg,
         color: '#FBBF24',
         title: 'Civil Engineering',
+        path: '/services/civil-architectural',
         items: [
             { name: 'Planning & Design Services', icon: 'fas fa-drafting-compass' },
             { name: 'Construction & Project Management', icon: 'fas fa-tasks' },
@@ -110,6 +116,7 @@ const services = [
         image: videoImg,
         color: '#F472B6',
         title: 'Video & Animation',
+        path: '/services/video-animation',
         items: [
             { name: 'Promotional Videos', icon: 'fas fa-film' },
             { name: '2D & 3D Animation', icon: 'fas fa-cubes' },
@@ -192,15 +199,15 @@ const Header = () => {
                 <div className="header-inner">
 
                     {/* Logo */}
-                    <a href="/" className="logo">
+                    <Link to="/" className="logo">
                         <img src={logo} alt="BrownSofts Logo" className="logo-img" />
-                    </a>
+                    </Link>
 
                     {/* Desktop Nav */}
                     <nav className={`main-nav${mobileOpen ? ' mobile-active' : ''}`} id="main-nav">
                         <ul className="nav-list">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About</Link></li>
 
                             {/* Services Dropdown */}
                             <li
@@ -221,20 +228,20 @@ const Header = () => {
                                     <ul className="dropdown-list">
                                         {services.map((cat) => (
                                             <li key={cat.id} className="dropdown-item-flat">
-                                                <a href="#" className="dropdown-cat-link">
+                                                <Link to={cat.path} className="dropdown-cat-link">
                                                     <div className="cat-img-wrap">
                                                         <img src={cat.image} alt={cat.title} className="cat-image" />
                                                     </div>
                                                     {cat.title}
-                                                </a>
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                             </li>
 
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#" className="active">Contact Us</a></li>
+                            <li><Link to="#">Blog</Link></li>
+                            <li><Link to="/contact">Contact Us</Link></li>
                         </ul>
 
                         {/* Mobile Services Accordion */}
@@ -249,14 +256,14 @@ const Header = () => {
                                 <div className="mobile-services-list">
                                     {services.map((cat) => (
                                         <div className="mobile-cat" key={cat.id}>
-                                            <div className="mobile-cat-header" style={{ '--cat-color': cat.color }}>
+                                            <Link to={cat.path} className="mobile-cat-header" style={{ '--cat-color': cat.color }}>
                                                 <div className="mobile-cat-img-wrap">
                                                     <img src={cat.image} alt={cat.title} className="mobile-cat-image" />
                                                 </div>
                                                 <div className="mobile-cat-title-wrap">
                                                     <span className="mobile-cat-badge">{cat.title}</span>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </div>
                                     ))}
                                 </div>

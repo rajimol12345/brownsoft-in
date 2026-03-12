@@ -1,7 +1,7 @@
 import React from 'react';
-import PremiumServiceLayout from '../components/PremiumServiceLayout';
-import VideoAnimationHero from '../components/VideoAnimationHero';
-import VideoIntroTwoColumn from '../components/VideoIntroTwoColumn';
+import PremiumServiceLayout from '../components/PremiumServiceLayout.jsx';
+import VideoAnimationHero from '../components/VideoAnimationHero.jsx';
+import VideoIntroTwoColumn from '../components/VideoIntroTwoColumn.jsx';
 
 const VideoAnimation = () => {
     const videoServices = [

@@ -1,0 +1,9 @@
+@media (max-width: 767px) {
+    .achievement-title h2 {
+        font-size: 2rem !important;
+        max-width: 100% !important;
+    }
+    .achievement-box {
+        padding: 50px 20px !important;
+    }
+}

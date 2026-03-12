@@ -1,6 +1,6 @@
 import React from 'react';
-import PremiumHero from '../components/PremiumHero';
-import ServicesHubList from '../components/ServicesHubList';
+import PremiumHero from '../components/PremiumHero.jsx';
+import ServicesHubList from '../components/ServicesHubList.jsx';
 
 const Services = () => {
     return (

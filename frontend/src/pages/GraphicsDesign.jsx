@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiceLandingLayout from '../components/ServiceLandingLayout';
-import SubServicesGrid from '../components/SubServicesGrid';
+import ServiceLandingLayout from '../components/ServiceLandingLayout.jsx';
+import SubServicesGrid from '../components/SubServicesGrid.jsx';
 
 const GraphicsDesign = () => {
     const graphicsServices = [

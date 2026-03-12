@@ -1,10 +1,10 @@
 import React from 'react';
-import AboutHero from '../components/AboutHero';
-import AboutSection from '../components/AboutSection';
-import CompanyHistory from '../components/CompanyHistory';
-import TeamSection from '../components/TeamSection';
-import CounterSection from '../components/CounterSection';
-import TestimonialsSection from '../components/TestimonialsSection';
+import AboutHero from '../components/AboutHero.jsx';
+import AboutSection from '../components/AboutSection.jsx';
+import CompanyHistory from '../components/CompanyHistory.jsx';
+import TeamSection from '../components/TeamSection.jsx';
+import CounterSection from '../components/CounterSection.jsx';
+import TestimonialsSection from '../components/TestimonialsSection.jsx';
 
 const About = () => {
     return (

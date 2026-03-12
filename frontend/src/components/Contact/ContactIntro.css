@@ -1,0 +1,134 @@
+/* ============================================================
+   CONTACT INTRO SECTION
+   ============================================================ */
+.contact-intro-section {
+    padding: 100px 0 60px;
+    background: var(--white);
+}
+
+.intro-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.intro-main {
+    flex: 1;
+}
+
+.intro-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.eyebrow-text {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.eyebrow-line {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.line-bar {
+    width: 35px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.line-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.intro-heading {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--dark-text);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.intro-heading .blue-text {
+    color: var(--primary);
+}
+
+.intro-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.intro-description {
+    font-size: 1.15rem;
+    color: var(--body-text);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Animations from App.css */
+.intro-main,
+.intro-content {
+    opacity: 0;
+    transition:
+        opacity 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: var(--stagger, 0s);
+}
+
+.intro-main.animate-in,
+.intro-content.animate-in {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+}
+
+.intro-main {
+    transform: translateX(-36px) translateY(0);
+}
+
+.intro-content {
+    transform: translateX(36px) translateY(0);
+}
+
+/* Eyebrow line grows in */
+.line-bar {
+    animation: fadeInLeft 0.7s ease 0.5s both;
+}
+
+.line-dot {
+    animation: scaleIn 0.4s ease 1s both;
+}
+
+@media (max-width: 991px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .intro-heading {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-heading {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .intro-description {
+        font-size: 1rem;
+    }
+}

@@ -13,6 +13,21 @@
   --wibita-light-purple: #ebf2ff;
   --wibita-dark: #0a2d6e;
   --transition: all 0.3s ease;
+
+  /* Additional variables for Contact Page components */
+  --primary: #124ebb;
+  --primary-dark: #0a3d91;
+  --primary-glow: rgba(18, 78, 187, 0.3);
+  --accent: #00D4FF;
+  --font-heading: 'Varela Round', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --dark-text: #0c0c0c;
+  --body-text: #666666;
+  --border: #eef2f8;
+  --light-bg: #f8fafc;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dark: #0c0c0c;
 }
 
 * {
