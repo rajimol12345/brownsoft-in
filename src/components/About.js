@@ -4,6 +4,7 @@ import CountUp from 'react-countup';
 import { FiPlay, FiUsers } from 'react-icons/fi';
 import { HiOutlineLightBulb, HiOutlinePresentationChartLine } from 'react-icons/hi';
 import 'aos/dist/aos.css';
+import '../style/About.css';
 
 // Import local assets
 import about1 from '../assets/about.jpg';

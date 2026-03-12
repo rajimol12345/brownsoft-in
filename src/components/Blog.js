@@ -3,6 +3,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FiArrowRight, FiCalendar, FiUser } from 'react-icons/fi';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import '../style/Blog.css';
 
 // Import correct images from assets
 import blogImg1 from '../assets/blog1.jpg';

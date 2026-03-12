@@ -1,0 +1,88 @@
+.theme-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 15px 35px;
+  border-radius: 5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.theme-btn:hover {
+  background-color: var(--heading-color);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+.section-title span {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.section-title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.custom-nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-nav-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wow.fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@media (max-width: 767px) {
+  .section-title-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FiHeart, FiSettings, FiUsers, FiArrowRight } from 'react-icons/fi';
+import '../style/Features.css';
 
 const Features = () => {
     const featureList = [

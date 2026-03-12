@@ -4,6 +4,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import ctaImg from '../assets/cta.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import '../style/CTA.css';
 
 const CTA = () => {
     useEffect(() => {

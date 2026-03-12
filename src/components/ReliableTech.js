@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FiArrowRight } from 'react-icons/fi';
+import '../style/ReliableTech.css';
 
 const ReliableTech = () => {
     const techList = [

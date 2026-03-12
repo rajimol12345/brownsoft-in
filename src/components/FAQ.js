@@ -3,6 +3,7 @@ import { Container, Row, Col, Accordion } from 'react-bootstrap';
 import aboutImg from '../assets/faq.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import '../style/FAQ.css';
 
 const FAQ = () => {
     useEffect(() => {

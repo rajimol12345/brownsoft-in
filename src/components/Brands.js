@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'aos/dist/aos.css';
+import '../style/Brands.css';
 import bis from '../assets/bis.png';
 import dew from '../assets/dew.png';
 import dia from '../assets/dia.png';

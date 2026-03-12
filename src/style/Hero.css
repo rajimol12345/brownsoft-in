@@ -1,0 +1,210 @@
+/* Hero Section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 70px);
+  min-height: 700px;
+}
+
+.hero-slider-item {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #0819b8 0%, rgba(8, 25, 184, 0.4) 60%, rgba(255, 255, 255, 0) 100%);
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 700px;
+  margin-top: -50px;
+  /* Bring content up slightly */
+}
+
+.hero-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.hero-subtitle::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #fff;
+}
+
+.hero-title {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 25px;
+  letter-spacing: -2px;
+}
+
+.text-nowrap {
+  font-size: 20px;
+}
+
+.hero-desc {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 45px;
+  opacity: 0.95;
+  max-width: 550px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-btn-solid {
+  background: #384bff;
+  color: #fff;
+  padding: 18px 35px;
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.hero-btn-solid:hover {
+  background: #fff;
+  color: #384bff;
+}
+
+.hero-btn-outline {
+  background: transparent;
+  color: #fff;
+  padding: 18px 35px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.hero-btn-outline:hover {
+  background: #fff;
+  color: #384bff;
+}
+
+/* Hero Navigation Custom Styles */
+.hero-navigation {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+
+.hero-nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 20px;
+  border: none;
+}
+
+.hero-nav-btn.hero-prev {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.hero-nav-btn:hover {
+  background: #fff;
+  color: var(--primary-color);
+  border-color: #fff;
+  transform: scale(1.1) rotate(10deg);
+}
+
+.hero-nav-btn.hero-prev:hover {
+  transform: scale(1.1) rotate(-10deg);
+}
+
+/* Animations */
+.hero-zoom-in {
+  transform: scale(1);
+  transition: transform 10s linear;
+}
+
+.hero-zoom-in.active {
+  transform: scale(1.15);
+}
+
+.hero-ring {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  width: 50px;
+  height: 50px;
+  border: 10px solid #5a6eff;
+  border-radius: 50%;
+  z-index: 5;
+  opacity: 0.8;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Bottom Curve Shape */
+.hero-bottom-curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  line-height: 0;
+}
+
+.hero-bottom-curve svg {
+  width: 100%;
+  height: auto;
+}

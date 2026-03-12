@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import '../style/Testimonials.css';
 import heroImg from '../assets/hero (2).jpg';
 import user1 from '../assets/grid-testimonial-05.png';
 import user2 from '../assets/01-5.jpg';
