@@ -4,10 +4,12 @@ import CountUp from 'react-countup';
 import { FiPlay, FiUsers } from 'react-icons/fi';
 import { HiOutlineLightBulb, HiOutlinePresentationChartLine } from 'react-icons/hi';
 import 'aos/dist/aos.css';
-import './About.css';
 
-import about1 from "../../assets/about.jpg";
-import about2 from "../../assets/about2.jpg";
+// Import local assets
+import about1 from '../assets/about.jpg';
+import about2 from '../assets/about2.jpg';
+import '../style/About.css';
+
 const About = () => {
     return (
         <section className="section-padding" id="about">

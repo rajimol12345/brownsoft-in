@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FiArrowRight, FiCheckCircle } from 'react-icons/fi';
-import './Growth.css';
+import '../style/Growth.css';
 
 const Growth = () => {
     return (

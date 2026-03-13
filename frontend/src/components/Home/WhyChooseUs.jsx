@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FiCheck, FiStar } from 'react-icons/fi';
-import './WhyChooseUs.css';
+import '../style/WhyChooseUs.css';
 
 const WhyChooseUs = () => {
     const list = [

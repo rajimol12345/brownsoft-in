@@ -1,0 +1,26 @@
+/* ============================================
+   WhyChooseUs Component Styles
+   ============================================ */
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.why-us-image-preview img {
+    transition: all 0.5s ease;
+}
+
+.why-us-image-preview:hover img {
+    transform: scale(1.02);
+}

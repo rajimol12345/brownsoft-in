@@ -1,5 +1,5 @@
 import React from 'react';
-import './Marquee.css';
+import '../style/Marquee.css';
 
 const Marquee = () => {
     const items = ["Business", "IT Solution", "Work Process", "Technology"];

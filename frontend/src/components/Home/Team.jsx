@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiArrowRight } from 'react-icons/fi';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './Team.css';
+import '../style/Team.css';
 
 // Import local assets
 import team1 from '../../assets/team1.jpg';

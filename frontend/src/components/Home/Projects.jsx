@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './Projects.css';
+import '../style/Projects.css';
 
 // Import images from assets
 import projImg1 from '../../assets/work1.jpg';

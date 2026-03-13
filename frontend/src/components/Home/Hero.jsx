@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import 'aos/dist/aos.css';
-import './Hero.css';
+import '../style/Hero.css';
 
 import { FiArrowRight, FiArrowLeft } from 'react-icons/fi';
 
