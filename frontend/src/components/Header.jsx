@@ -215,14 +215,13 @@ const Header = () => {
                                 onMouseEnter={() => setMegaOpen(true)}
                                 onMouseLeave={() => setMegaOpen(false)}
                             >
-                                <a
-                                    href="#"
+                                <Link
+                                    to="/services"
                                     className={megaOpen ? 'active' : ''}
-                                    onClick={(e) => { e.preventDefault(); setMegaOpen(!megaOpen); }}
                                 >
                                     Services
                                     <i className={`fas fa-chevron-down nav-arrow${megaOpen ? ' rotated' : ''}`}></i>
-                                </a>
+                                </Link>
 
                                 <div className={`services-dropdown${megaOpen ? ' show' : ''}`}>
                                     <ul className="dropdown-list">
@@ -240,7 +239,7 @@ const Header = () => {
                                 </div>
                             </li>
 
-                            <li><Link to="#">Blog</Link></li>
+                            <li><Link to="/blog">Blog</Link></li>
                             <li><Link to="/contact">Contact Us</Link></li>
                         </ul>
 

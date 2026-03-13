@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import CountUp from 'react-countup';
-import './Achievements.css';
 
 // Import local assets
 import icon1 from '../../assets/01.svg';
@@ -99,6 +98,18 @@ const Achievements = () => {
                     </div>
                 </div>
             </Container>
+
+            <style>{`
+                @media (max-width: 767px) {
+                    .achievement-title h2 {
+                        font-size: 2rem !important;
+                        max-width: 100% !important;
+                    }
+                    .achievement-box {
+                        padding: 50px 20px !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };

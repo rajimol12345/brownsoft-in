@@ -11,8 +11,10 @@ import SEOMarketing from './pages/SEOMarketing';
 import AdminSupport from './pages/AdminSupport';
 import CivilArchitectural from './pages/CivilArchitectural';
 import Careers from './pages/Careers';
-
 import Contact from './pages/Contact';
+import Blog from './components/Blog';
+import BlogDetails from './components/BlogDetails';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -32,8 +34,11 @@ function App() {
             <Route path="/services/civil-architectural" element={<CivilArchitectural />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogDetails />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );

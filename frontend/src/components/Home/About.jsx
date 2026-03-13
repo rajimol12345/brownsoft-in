@@ -6,10 +6,8 @@ import { HiOutlineLightBulb, HiOutlinePresentationChartLine } from 'react-icons/
 import 'aos/dist/aos.css';
 import './About.css';
 
-// Import local assets
-import about1 from '../../assets/about.jpg';
-import about2 from '../../assets/about2.jpg';
-
+import about1 from "../../assets/about.jpg";
+import about2 from "../../assets/about2.jpg";
 const About = () => {
     return (
         <section className="section-padding" id="about">

@@ -168,3 +168,44 @@
 .service-card:hover .service-title {
     margin-top: 20px;
 }
+
+.custom-nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    color: #384bff;
+    border: 1px solid rgba(56, 75, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.custom-nav-btn.active {
+    background: #384bff;
+    color: #fff;
+    border-color: #384bff;
+}
+
+.custom-nav-btn:hover {
+    background: #384bff;
+    color: #fff;
+}
+
+.service-item:hover {
+  background: var(--primary-color) !important;
+  transform: translateY(-10px);
+}
+
+.service-item:hover h4,
+.service-item:hover p,
+.service-item:hover a {
+  color: var(--white) !important;
+}
+
+.service-item:hover .icon img {
+  filter: brightness(0) invert(1);
+}
