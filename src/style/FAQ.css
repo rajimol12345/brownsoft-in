@@ -1,0 +1,29 @@
+/* ============================================
+   FAQ Component Styles
+   ============================================ */
+.custom-faq-accordion .accordion-item {
+    transition: all 0.3s ease;
+}
+
+.custom-faq-accordion .accordion-header button {
+    font-weight: 700 !important;
+    font-size: 18px;
+    box-shadow: none !important;
+    background: #fff !important;
+    color: var(--heading-color) !important;
+    padding: 20px 25px;
+}
+
+.custom-faq-accordion .accordion-header button:not(.collapsed) {
+    color: var(--primary-color) !important;
+    border-bottom: 0;
+}
+
+.custom-faq-accordion .accordion-button::after {
+    background-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.custom-faq-accordion .accordion-item:hover {
+    transform: translateX(10px);
+}

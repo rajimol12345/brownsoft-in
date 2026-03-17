@@ -1,0 +1,15 @@
+/* ============================================
+   CTA Component Styles
+   ============================================ */
+.cta-wrapper {
+    transition: transform 0.4s ease;
+}
+
+.cta-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.cta-btn .theme-btn:hover {
+    background: var(--heading-color) !important;
+    color: #fff !important;
+}

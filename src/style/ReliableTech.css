@@ -1,0 +1,19 @@
+/* ============================================
+   ReliableTech Component Styles
+   ============================================ */
+.tech-item-card:hover img {
+    transform: scale(1.1);
+}
+
+.tech-item-card:hover .tech-item-overlay {
+    background: linear-gradient(to top, rgba(56, 75, 255, 0.95) 0%, transparent 90%);
+}
+
+.tech-item-card:hover .tech-item-content {
+    transform: translateY(-10px);
+}
+
+.tech-item-card:hover .tech-item-content p,
+.tech-item-card:hover .tech-item-content a {
+    color: #fff !important;
+}

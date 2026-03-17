@@ -1,0 +1,22 @@
+/* ============================================
+   Pricing Component Styles
+   ============================================ */
+.pricing-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1) !important;
+}
+
+.active-plan {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.pricing-card.active-plan .theme-btn:hover {
+    background: #fff !important;
+    color: var(--primary-color) !important;
+}
+
+.pricing-card:not(.active-plan) .theme-btn:hover {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+}

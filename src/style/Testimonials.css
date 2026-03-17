@@ -1,0 +1,54 @@
+/* ============================================
+   Testimonials Component Styles
+   ============================================ */
+.testimonial-slider .swiper-pagination-bullet-active {
+    background: var(--primary-color);
+}
+
+.testimonial-slider .swiper-pagination {
+    text-align: center;
+    bottom: -40px !important;
+}
+
+.testimonial-nav-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: #fff;
+}
+
+.testimonial-nav-btn.active {
+    background: #384bff;
+    border-color: #384bff;
+}
+
+.testimonial-nav-btn:hover {
+    background: #384bff;
+    border-color: #384bff;
+}
+
+.testimonial-card-v2 {
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.testimonial-card-v2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+@media (max-width: 767px) {
+    .testimonial-nav {
+        display: none !important;
+    }
+    .section-title h2 {
+        font-size: 28px;
+    }
+}

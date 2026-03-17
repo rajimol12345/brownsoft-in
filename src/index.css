@@ -1,0 +1,31 @@
+@import './style/Global.css';
+@import './style/Navbar.css';
+
+:root {
+  --primary-color: #384bff;
+  --secondary-color: #246bfd;
+  --heading-color: #0f0d1d;
+  --text-color: #585858;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+  --font-main: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--white);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-main);
+  color: var(--heading-color);
+  font-weight: 700;
+}

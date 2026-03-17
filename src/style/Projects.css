@@ -1,0 +1,25 @@
+/* ============================================
+   Projects Component Styles
+   ============================================ */
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-info {
+    transform: translateY(0);
+}
+
+.custom-nav-btn.outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.project-link-btn:hover {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+}
